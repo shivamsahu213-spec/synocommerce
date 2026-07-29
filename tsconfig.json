@@ -25,6 +25,7 @@
       "@config/*": ["src/config/*"],
       "@app/*": ["src/app/*"],
       "@features/*": ["src/features/*"],
+      "@platform/*": ["src/platform/*"],
       "@shared/*": ["src/shared/*"],
       "@theme/*": ["src/theme/*"],
       "@store/*": ["src/store/*"],

@@ -5,6 +5,7 @@
 - `src/app`: routing, layouts, route handlers, framework composition
 - `src/config`: runtime, environment, platform, provider, and feature configuration
 - `src/features`: vertical feature slices only
+- `src/platform`: framework infrastructure, contracts, abstractions, and extension points
 - `src/shared`: cross-feature UI, hooks, providers, and low-level libraries
 - `src/store`: app-scoped client state only
 - `src/theme`: brands, tokens, theme registries, and presentation contracts
