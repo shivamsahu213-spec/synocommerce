@@ -41,5 +41,13 @@ SynoCommerce is the reusable enterprise ecommerce platform foundation for SynoSt
 
 - `npm run lint`
 - `npm run typecheck`
+- `npm run test`
 - `npm run format:check`
 - `npm run check`
+
+## Governance
+
+- Commit messages follow Conventional Commits
+- Releases follow Semantic Versioning
+- GitHub Actions enforce lint, typecheck, test, build, and dependency audit
+- Engineering standards live under `docs/standards`

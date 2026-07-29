@@ -1,0 +1,7 @@
+* @SynoStack-Technologies/platform-engineering
+
+/src/app/ @SynoStack-Technologies/frontend-architecture
+/src/config/ @SynoStack-Technologies/platform-engineering
+/src/shared/ @SynoStack-Technologies/frontend-foundation
+/src/theme/ @SynoStack-Technologies/design-systems
+/docs/ @SynoStack-Technologies/platform-engineering

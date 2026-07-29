@@ -1,4 +1,5 @@
 import { getAppRuntimeConfig } from '@config/runtime.config';
+import { createAppError, mapHttpError } from '@shared/lib/errors';
 
 type RequestOptions = RequestInit & {
   query?: Record<string, string | number | boolean | undefined>;
@@ -21,17 +22,31 @@ function buildUrl(path: string, query?: RequestOptions['query']) {
 }
 
 export async function apiClient<T>(path: string, options: RequestOptions = {}): Promise<T> {
+  const runtime = getAppRuntimeConfig();
   const response = await fetch(buildUrl(path, options.query), {
     ...options,
     headers: {
       'Content-Type': 'application/json',
+      'X-Brand-Code': runtime.brandCode,
       ...(options.headers ?? {})
     },
     cache: 'no-store'
+  }).catch((error: unknown) => {
+    throw createAppError({
+      code: 'network_error',
+      message: 'Network request failed.',
+      retryable: true,
+      details: {
+        cause: error instanceof Error ? error.message : 'unknown'
+      }
+    });
   });
 
   if (!response.ok) {
-    throw new Error(`API request failed with status ${response.status}`);
+    throw mapHttpError(response.status, {
+      path,
+      method: options.method ?? 'GET'
+    });
   }
 
   return response.json() as Promise<T>;

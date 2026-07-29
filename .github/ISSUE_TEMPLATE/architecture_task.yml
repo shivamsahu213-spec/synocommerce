@@ -1,0 +1,26 @@
+name: Architecture task
+description: Plan a platform-level improvement
+title: "chore: "
+labels: ["architecture"]
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: What enterprise problem are we solving?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Boundaries, non-goals, and impacted layers.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Clear, verifiable outcomes.
+    validations:
+      required: true

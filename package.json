@@ -11,12 +11,21 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit --pretty false",
+    "test": "node --test",
+    "audit:dependencies": "npm audit --audit-level=high",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "commit": "cz",
+    "release:check": "semantic-release --dry-run",
     "prepare": "husky",
-    "check": "npm run lint && npm run typecheck && npm run format:check"
+    "check": "npm run lint && npm run typecheck && npm run test && npm run format:check"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-git"
+    }
   },
   "lint-staged": {
     "*.{js,cjs,mjs,ts,tsx,json,md}": [
@@ -44,18 +53,32 @@
     "zustand": "^5.0.7"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^19.8.1",
     "@eslint/eslintrc": "^3.1.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.6",
+    "@semantic-release/npm": "^12.0.2",
+    "@semantic-release/release-notes-generator": "^14.1.0",
     "@tailwindcss/postcss": "^4.1.12",
     "@types/node": "^22.17.1",
     "@types/react": "^19.1.9",
     "@types/react-dom": "^19.1.7",
+    "commitizen": "^4.3.1",
+    "commitlint": "^19.8.1",
+    "cz-git": "^1.11.2",
     "eslint": "^9.32.0",
     "eslint-config-next": "15.4.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.8",
+    "semantic-release": "^24.2.7",
     "tailwindcss": "^4.1.12",
     "typescript": "^5.8.3"
   }
