@@ -30,7 +30,10 @@
       "@shared/*": ["src/shared/*"],
       "@theme/*": ["src/theme/*"],
       "@store/*": ["src/store/*"],
-      "@types/*": ["src/types/*"]
+      "@types/*": ["src/types/*"],
+      "@admin/*": ["apps/admin/src/*"],
+      "@storefront/*": ["apps/storefront/src/*"],
+      "@tools/*": ["tools/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
