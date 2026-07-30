@@ -23,6 +23,7 @@
     "paths": {
       "@/*": ["src/*"],
       "@config/*": ["src/config/*"],
+      "@domain/*": ["src/domain/*"],
       "@app/*": ["src/app/*"],
       "@features/*": ["src/features/*"],
       "@platform/*": ["src/platform/*"],
