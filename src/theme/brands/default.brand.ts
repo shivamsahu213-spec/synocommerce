@@ -1,4 +1,4 @@
-import type { BrandDefinition } from '@types/theme';
+import type { BrandDefinition } from '@/types/theme';
 
 export const defaultBrand: BrandDefinition = {
   code: 'default',

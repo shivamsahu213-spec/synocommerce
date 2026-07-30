@@ -1,4 +1,4 @@
-import type { ThemeDefinition } from '@types/theme';
+import type { ThemeDefinition } from '@/types/theme';
 import { designTokens } from '@theme/tokens';
 
 export const coreTheme: ThemeDefinition = {

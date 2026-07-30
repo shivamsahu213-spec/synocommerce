@@ -5,17 +5,17 @@ import { CustomerSuspendedError } from '../errors';
 
 export interface CustomerProps {
   email: Email;
-  phoneNumber?: PhoneNumber;
-  status?: CustomerStatus;
-  customerType?: CustomerType;
+  phoneNumber?: PhoneNumber | undefined;
+  status?: CustomerStatus | undefined;
+  customerType?: CustomerType | undefined;
   profile: CustomerProfile;
-  preferences?: CustomerPreferences;
-  groups?: CustomerGroup[];
+  preferences?: CustomerPreferences | undefined;
+  groups?: CustomerGroup[] | undefined;
 }
 
 export class CustomerAggregate extends AggregateRoot<CustomerIdentifier> implements ICustomer {
   private _email: Email;
-  private _phoneNumber?: PhoneNumber;
+  private _phoneNumber?: PhoneNumber | undefined;
   private _status: CustomerStatus;
   private _customerType: CustomerType;
   private _profile: CustomerProfile;

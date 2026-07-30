@@ -7,10 +7,10 @@ import { InvalidProductStateError } from '../errors';
 export interface ProductProps {
   title: string;
   slug: Slug;
-  productType?: ProductType;
-  state?: ProductPublicationState;
-  variants?: ProductVariantEntity[];
-  seo?: SeoMetadata;
+  productType?: ProductType | undefined;
+  state?: ProductPublicationState | undefined;
+  variants?: ProductVariantEntity[] | undefined;
+  seo?: SeoMetadata | undefined;
 }
 
 export class ProductAggregate extends AggregateRoot<Identifier> implements IProduct {
@@ -19,7 +19,7 @@ export class ProductAggregate extends AggregateRoot<Identifier> implements IProd
   private _productType: ProductType;
   private _state: ProductPublicationState;
   private _variants: ProductVariantEntity[];
-  private _seo?: SeoMetadata;
+  private _seo?: SeoMetadata | undefined;
 
   constructor(id: Identifier, props: ProductProps) {
     super(id);

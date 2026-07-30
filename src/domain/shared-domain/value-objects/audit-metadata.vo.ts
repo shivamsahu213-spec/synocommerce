@@ -1,8 +1,8 @@
 export interface AuditMetadataProps {
   readonly createdAt: Date;
-  readonly createdBy?: string;
+  readonly createdBy?: string | undefined;
   readonly updatedAt: Date;
-  readonly updatedBy?: string;
+  readonly updatedBy?: string | undefined;
 }
 
 /**

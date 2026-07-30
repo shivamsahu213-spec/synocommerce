@@ -1,5 +1,5 @@
 /**
- * Domain Layer Root Exports - Sprint 1 & Sprint 2 Bounded Contexts
+ * Domain Layer Root Exports - Sprint 1, Sprint 2 & Sprint 3 Bounded Contexts
  * @module domain
  */
 
@@ -18,3 +18,12 @@ export * from './checkout';
 export * from './orders';
 export * from './customers';
 export * from './addresses';
+
+// Sprint 3 Financial & Fulfillment Domain Layer
+export * from './payments';
+export * from './shipping';
+export * from './fulfillment';
+export * from './tax';
+export * from './returns';
+export * from './refunds';
+export * from './invoicing';

@@ -5,7 +5,7 @@ import { InvalidValueObjectError } from '../errors';
  */
 export class DateRange {
   private readonly _startDate: Date;
-  private readonly _endDate?: Date;
+  private readonly _endDate?: Date | undefined;
 
   constructor(startDate: Date, endDate?: Date) {
     if (!startDate || isNaN(startDate.getTime())) {

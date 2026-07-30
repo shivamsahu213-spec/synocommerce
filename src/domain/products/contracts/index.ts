@@ -6,9 +6,9 @@ export interface IProductVariant {
   readonly sku: SKU;
   readonly title: string;
   readonly price: Money;
-  readonly compareAtPrice?: Money;
-  readonly weight?: Weight;
-  readonly dimension?: Dimension;
+  readonly compareAtPrice?: Money | undefined;
+  readonly weight?: Weight | undefined;
+  readonly dimension?: Dimension | undefined;
 }
 
 export interface IProduct {
@@ -18,5 +18,5 @@ export interface IProduct {
   readonly productType: ProductType;
   readonly state: ProductPublicationState;
   readonly variants: readonly IProductVariant[];
-  readonly seo?: SeoMetadata;
+  readonly seo?: SeoMetadata | undefined;
 }

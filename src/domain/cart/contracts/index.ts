@@ -15,9 +15,9 @@ export interface ICart {
   readonly currency: Currency;
   readonly cartType: CartType;
   readonly state: CartState;
-  readonly customerId?: string;
+  readonly customerId?: string | undefined;
   readonly items: readonly ICartItem[];
   readonly discounts: readonly AppliedDiscount[];
   readonly totals: CartTotals;
-  readonly expiresAt?: Date;
+  readonly expiresAt?: Date | undefined;
 }

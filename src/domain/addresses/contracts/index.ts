@@ -5,6 +5,6 @@ export interface IAddress {
   readonly id: AddressIdentifier;
   readonly role: AddressRole;
   readonly address: Address;
-  readonly geoLocation?: GeoLocation;
+  readonly geoLocation?: GeoLocation | undefined;
   readonly isDefault: boolean;
 }

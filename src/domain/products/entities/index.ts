@@ -5,18 +5,18 @@ export interface ProductVariantProps {
   sku: SKU;
   title: string;
   price: Money;
-  compareAtPrice?: Money;
-  weight?: Weight;
-  dimension?: Dimension;
+  compareAtPrice?: Money | undefined;
+  weight?: Weight | undefined;
+  dimension?: Dimension | undefined;
 }
 
 export class ProductVariantEntity extends Entity<Identifier> implements IProductVariant {
   private _sku: SKU;
   private _title: string;
   private _price: Money;
-  private _compareAtPrice?: Money;
-  private _weight?: Weight;
-  private _dimension?: Dimension;
+  private _compareAtPrice?: Money | undefined;
+  private _weight?: Weight | undefined;
+  private _dimension?: Dimension | undefined;
 
   constructor(id: Identifier, props: ProductVariantProps) {
     super(id);

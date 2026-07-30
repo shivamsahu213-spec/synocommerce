@@ -1,9 +1,9 @@
 export interface SeoMetadataProps {
-  readonly title?: string;
-  readonly description?: string;
-  readonly keywords?: readonly string[];
-  readonly canonicalUrl?: string;
-  readonly openGraphImage?: string;
+  readonly title?: string | undefined;
+  readonly description?: string | undefined;
+  readonly keywords?: readonly string[] | undefined;
+  readonly canonicalUrl?: string | undefined;
+  readonly openGraphImage?: string | undefined;
 }
 
 /**

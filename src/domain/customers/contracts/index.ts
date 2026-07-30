@@ -4,7 +4,7 @@ import { CustomerIdentifier, CustomerStatus, CustomerType, CustomerProfile, Cust
 export interface ICustomer {
   readonly id: CustomerIdentifier;
   readonly email: Email;
-  readonly phoneNumber?: PhoneNumber;
+  readonly phoneNumber?: PhoneNumber | undefined;
   readonly status: CustomerStatus;
   readonly customerType: CustomerType;
   readonly profile: CustomerProfile;

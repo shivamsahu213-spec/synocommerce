@@ -6,7 +6,7 @@ export class BasePrice implements IBasePrice {
 }
 
 export class SalePrice implements ISalePrice {
-  constructor(public readonly amount: Money, public readonly dateRange?: DateRange) {}
+  constructor(public readonly amount: Money, public readonly dateRange?: DateRange | undefined) {}
 }
 
 export class CompareAtPrice implements ICompareAtPrice {

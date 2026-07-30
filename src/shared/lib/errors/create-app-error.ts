@@ -1,4 +1,4 @@
-import type { AppError, AppErrorCode } from '@types/error';
+import type { AppError, AppErrorCode } from '@/types/error';
 
 type CreateAppErrorInput = {
   code: AppErrorCode;

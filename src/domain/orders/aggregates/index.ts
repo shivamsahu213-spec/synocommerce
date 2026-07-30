@@ -2,13 +2,13 @@ import { AggregateRoot, Currency, Money } from '../..';
 import { OrderIdentifier, OrderNumber, OrderTotals, OrderPayment, OrderShipment, OrderInvoice } from '../value-objects';
 import { IOrder } from '../contracts';
 import { OrderItemEntity } from '../entities';
-import { OrderStatus, PaymentStatus, FulfillmentStatus } from '../types';
+import { OrderStatus, OrderPaymentStatus, OrderFulfillmentStatus } from '../types';
 import { InvalidOrderStateTransitionError } from '../errors';
 
 export class OrderAggregate extends AggregateRoot<OrderIdentifier> implements IOrder {
   private _status: OrderStatus;
-  private _paymentStatus: PaymentStatus;
-  private _fulfillmentStatus: FulfillmentStatus;
+  private _paymentStatus: OrderPaymentStatus;
+  private _fulfillmentStatus: OrderFulfillmentStatus;
   private _items: OrderItemEntity[];
   private _totals: OrderTotals;
   private _payment?: OrderPayment;
@@ -32,8 +32,8 @@ export class OrderAggregate extends AggregateRoot<OrderIdentifier> implements IO
   }
 
   public get status(): OrderStatus { return this._status; }
-  public get paymentStatus(): PaymentStatus { return this._paymentStatus; }
-  public get fulfillmentStatus(): FulfillmentStatus { return this._fulfillmentStatus; }
+  public get paymentStatus(): OrderPaymentStatus { return this._paymentStatus; }
+  public get fulfillmentStatus(): OrderFulfillmentStatus { return this._fulfillmentStatus; }
   public get items(): readonly OrderItemEntity[] { return [...this._items]; }
   public get totals(): OrderTotals { return this._totals; }
   public get payment(): OrderPayment | undefined { return this._payment; }

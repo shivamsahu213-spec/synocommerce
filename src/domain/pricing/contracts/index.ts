@@ -7,7 +7,7 @@ export interface IBasePrice {
 
 export interface ISalePrice {
   readonly amount: Money;
-  readonly dateRange?: DateRange;
+  readonly dateRange?: DateRange | undefined;
 }
 
 export interface ICompareAtPrice {
@@ -26,7 +26,7 @@ export interface IPriceRule {
   readonly name: string;
   readonly ruleType: PriceRuleType;
   readonly discountValue: number;
-  readonly dateRange?: DateRange;
+  readonly dateRange?: DateRange | undefined;
 }
 
 export interface ITaxClass {

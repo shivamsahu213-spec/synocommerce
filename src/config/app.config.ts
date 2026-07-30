@@ -1,4 +1,4 @@
-import type { AppConfig } from '@types/app';
+import type { AppConfig } from '@/types/app';
 
 export const appConfig: AppConfig = {
   name: 'SynoCommerce',

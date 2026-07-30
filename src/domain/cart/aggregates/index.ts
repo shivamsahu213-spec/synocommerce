@@ -8,19 +8,19 @@ export class CartAggregate extends AggregateRoot<CartIdentifier> implements ICar
   private _currency: Currency;
   private _cartType: CartType;
   private _state: CartState;
-  private _customerId?: string;
+  private _customerId?: string | undefined;
   private _items: CartItemEntity[];
   private _discounts: AppliedDiscount[];
-  private _expiresAt?: Date;
+  private _expiresAt?: Date | undefined;
 
   constructor(
     id: CartIdentifier,
     currency: Currency,
     cartType: CartType = 'GUEST',
-    customerId?: string,
+    customerId?: string | undefined,
     items: CartItemEntity[] = [],
     discounts: AppliedDiscount[] = [],
-    expiresAt?: Date
+    expiresAt?: Date | undefined
   ) {
     super(id);
     this._currency = currency;

@@ -20,7 +20,11 @@ export interface PaymentSelection {
   readonly paymentMethodType: string;
 }
 
-export interface TaxCalculation {
+/**
+ * Checkout-session tax estimate snapshot.
+ * Distinct from the canonical TaxCalculation owned by the tax bounded context.
+ */
+export interface CheckoutTaxEstimate {
   readonly totalTax: Money;
   readonly taxRate: number;
   readonly isTaxInclusive: boolean;

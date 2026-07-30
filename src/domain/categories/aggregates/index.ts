@@ -5,17 +5,17 @@ import { InvalidCategoryParentError } from '../errors';
 export interface CategoryProps {
   name: string;
   slug: Slug;
-  parentId?: Identifier;
-  displayOrder?: number;
-  seo?: SeoMetadata;
+  parentId?: Identifier | undefined;
+  displayOrder?: number | undefined;
+  seo?: SeoMetadata | undefined;
 }
 
 export class CategoryAggregate extends AggregateRoot<Identifier> implements ICategory {
   private _name: string;
   private _slug: Slug;
-  private _parentId?: Identifier;
+  private _parentId?: Identifier | undefined;
   private _displayOrder: number;
-  private _seo?: SeoMetadata;
+  private _seo?: SeoMetadata | undefined;
 
   constructor(id: Identifier, props: CategoryProps) {
     super(id);

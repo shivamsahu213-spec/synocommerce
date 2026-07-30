@@ -4,19 +4,19 @@ import { IBrand } from '../contracts';
 export interface BrandProps {
   name: string;
   slug: Slug;
-  logoUrl?: string;
-  websiteUrl?: string;
-  isActive?: boolean;
-  seo?: SeoMetadata;
+  logoUrl?: string | undefined;
+  websiteUrl?: string | undefined;
+  isActive?: boolean | undefined;
+  seo?: SeoMetadata | undefined;
 }
 
 export class BrandAggregate extends AggregateRoot<Identifier> implements IBrand {
   private _name: string;
   private _slug: Slug;
-  private _logoUrl?: string;
-  private _websiteUrl?: string;
+  private _logoUrl?: string | undefined;
+  private _websiteUrl?: string | undefined;
   private _isActive: boolean;
-  private _seo?: SeoMetadata;
+  private _seo?: SeoMetadata | undefined;
 
   constructor(id: Identifier, props: BrandProps) {
     super(id);

@@ -1,5 +1,12 @@
 import { AggregateRoot } from '../..';
-import { CheckoutSessionIdentifier, CheckoutStep, ShippingSelection, BillingSelection, PaymentSelection, TaxCalculation } from '../value-objects';
+import {
+  CheckoutSessionIdentifier,
+  CheckoutStep,
+  ShippingSelection,
+  BillingSelection,
+  PaymentSelection,
+  CheckoutTaxEstimate,
+} from '../value-objects';
 import { ICheckoutSession } from '../contracts';
 import { CheckoutStatus } from '../types';
 
@@ -9,7 +16,7 @@ export class CheckoutSessionAggregate extends AggregateRoot<CheckoutSessionIdent
   private _shippingSelection?: ShippingSelection;
   private _billingSelection?: BillingSelection;
   private _paymentSelection?: PaymentSelection;
-  private _taxCalculation?: TaxCalculation;
+  private _taxCalculation?: CheckoutTaxEstimate;
 
   constructor(
     id: CheckoutSessionIdentifier,
@@ -26,7 +33,7 @@ export class CheckoutSessionAggregate extends AggregateRoot<CheckoutSessionIdent
   public get shippingSelection(): ShippingSelection | undefined { return this._shippingSelection; }
   public get billingSelection(): BillingSelection | undefined { return this._billingSelection; }
   public get paymentSelection(): PaymentSelection | undefined { return this._paymentSelection; }
-  public get taxCalculation(): TaxCalculation | undefined { return this._taxCalculation; }
+  public get taxCalculation(): CheckoutTaxEstimate | undefined { return this._taxCalculation; }
 
   public setShippingSelection(selection: ShippingSelection): void {
     this._shippingSelection = selection;

@@ -1,6 +1,6 @@
 import { SKU, Money, Currency } from '../..';
 import { OrderIdentifier, OrderNumber, OrderTotals, OrderPayment, OrderShipment, OrderInvoice } from '../value-objects';
-import { OrderStatus, PaymentStatus, FulfillmentStatus } from '../types';
+import { OrderStatus, OrderPaymentStatus, OrderFulfillmentStatus } from '../types';
 
 export interface IOrderItem {
   readonly itemId: string;
@@ -17,11 +17,11 @@ export interface IOrder {
   readonly customerId: string;
   readonly currency: Currency;
   readonly status: OrderStatus;
-  readonly paymentStatus: PaymentStatus;
-  readonly fulfillmentStatus: FulfillmentStatus;
+  readonly paymentStatus: OrderPaymentStatus;
+  readonly fulfillmentStatus: OrderFulfillmentStatus;
   readonly items: readonly IOrderItem[];
   readonly totals: OrderTotals;
-  readonly payment?: OrderPayment;
-  readonly shipment?: OrderShipment;
-  readonly invoice?: OrderInvoice;
+  readonly payment?: OrderPayment | undefined;
+  readonly shipment?: OrderShipment | undefined;
+  readonly invoice?: OrderInvoice | undefined;
 }

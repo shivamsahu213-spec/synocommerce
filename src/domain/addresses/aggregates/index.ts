@@ -5,14 +5,14 @@ import { IAddress } from '../contracts';
 export class AddressAggregate extends AggregateRoot<AddressIdentifier> implements IAddress {
   private _role: AddressRole;
   private _address: Address;
-  private _geoLocation?: GeoLocation;
+  private _geoLocation?: GeoLocation | undefined;
   private _isDefault: boolean;
 
   constructor(
     id: AddressIdentifier,
     role: AddressRole,
     address: Address,
-    geoLocation?: GeoLocation,
+    geoLocation?: GeoLocation | undefined,
     isDefault = false
   ) {
     super(id);

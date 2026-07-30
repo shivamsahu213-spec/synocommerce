@@ -1,14 +1,16 @@
 import { createAppError } from '@shared/lib/errors/create-app-error';
-import type { AppError } from '@types/error';
+import type { AppError } from '@/types/error';
 
 export function mapHttpError(statusCode: number, details?: Record<string, unknown>): AppError {
+  const detailsObj = details !== undefined ? { details } : {};
+
   if (statusCode === 401) {
     return createAppError({
       code: 'auth_error',
       message: 'Authentication is required.',
       retryable: false,
       statusCode,
-      details
+      ...detailsObj
     });
   }
 
@@ -18,7 +20,7 @@ export function mapHttpError(statusCode: number, details?: Record<string, unknow
       message: 'You do not have permission to access this resource.',
       retryable: false,
       statusCode,
-      details
+      ...detailsObj
     });
   }
 
@@ -28,7 +30,7 @@ export function mapHttpError(statusCode: number, details?: Record<string, unknow
       message: 'The requested resource could not be found.',
       retryable: false,
       statusCode,
-      details
+      ...detailsObj
     });
   }
 
@@ -38,7 +40,7 @@ export function mapHttpError(statusCode: number, details?: Record<string, unknow
       message: 'An upstream server error occurred.',
       retryable: true,
       statusCode,
-      details
+      ...detailsObj
     });
   }
 
@@ -47,6 +49,6 @@ export function mapHttpError(statusCode: number, details?: Record<string, unknow
     message: 'The request could not be completed.',
     retryable: false,
     statusCode,
-    details
+    ...detailsObj
   });
 }
