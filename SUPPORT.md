@@ -1,13 +1,13 @@
-# Support
+# SynoCommerce Support & Escalation Policy
 
-## Engineering Support Channels
+## Enterprise Support Tiers
 
-- Platform architecture: `platform@synostack.com`
-- Frontend foundation: `frontend@synostack.com`
-- Security: `security@synostack.com`
+- **Community Support**: GitHub Issues & Community Discussions.
+- **Enterprise PaaS Support**: 24/7 SLA with 15-minute critical incident response times via support@synocommerce.com.
 
-## Before Requesting Support
+## System Health & Telemetry
 
-- Confirm the issue is reproducible on the latest `main`
-- Include logs, environment, and impacted module
-- Link relevant ADRs or architecture docs where possible
+Check system status using the Syno CLI:
+```bash
+syno doctor
+```

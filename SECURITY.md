@@ -1,19 +1,16 @@
-# Security Policy
+# SynoCommerce Security Governance Policy
 
-## Supported Versions
+## Security Model & Principles
 
-Only the latest `main` branch and the latest tagged release are supported for security fixes.
+SynoCommerce enforces enterprise security controls across every architectural layer:
 
-## Reporting a Vulnerability
+1. **Cryptographic Standards**: Native Node.js `node:crypto` PBKDF2 with 10,000 iterations, unique 16-byte random salts, and SHA-512 hashes.
+2. **Timing-Safe Equality**: All credential verification uses `crypto.timingSafeEqual` to eliminate timing side-channel attacks.
+3. **Brute-Force Lockout**: 5 consecutive invalid authentication failures lock accounts automatically for 15 minutes.
+4. **Multi-Factor Authentication (MFA)**: RFC 6238 TOTP engine built with native HMAC-SHA1.
+5. **Webhook Integrity**: HMAC SHA-256 signatures for payment and shipping webhook validation.
+6. **Role-Based Access Control (RBAC)**: Fine-grained permission matching (`catalog:*`, `orders:*`, `payments:refund`, `kernel:*`) with wildcard support.
 
-Do not open public issues for vulnerabilities.
+## Reporting Vulnerabilities
 
-- Contact: `security@synostack.com`
-- Include: impact, reproduction steps, affected paths, proposed mitigations
-- Expected acknowledgement: within 2 business days
-
-## Security Baseline
-
-- Environment variables are validated before runtime use
-- Third-party providers must be accessed through configuration and adapter boundaries
-- Secrets must never be committed to the repository
+Please report security issues directly to security@synocommerce.com. Responsible disclosures are investigated within 24 hours.

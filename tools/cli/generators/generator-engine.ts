@@ -22,7 +22,10 @@ export interface GeneratorResult {
 
 export class CodeGeneratorEngine {
   public generate(type: GeneratorType, name: string): GeneratorResult {
-    const pascalName = name.charAt(0).toUpperCase() + name.slice(1);
+    const pascalName = name
+      .split('-')
+      .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+      .join('');
     let codeContent = '';
     let fileName = '';
 
