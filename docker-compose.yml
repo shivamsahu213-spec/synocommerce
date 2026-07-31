@@ -1,0 +1,152 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: syno_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: syno_user
+      POSTGRES_PASSWORD: syno_password
+      POSTGRES_DB: synocommerce
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init-db.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U syno_user -d synocommerce"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # Redis Cache & Pub/Sub
+  redis:
+    image: redis:7-alpine
+    container_name: syno_redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # Meilisearch Engine
+  meilisearch:
+    image: getmeili/meilisearch:v1.6
+    container_name: syno_meilisearch
+    restart: always
+    environment:
+      MEILI_MASTER_KEY: syno_meili_master_key_2026
+      MEILI_NO_ANALYTICS: "true"
+    ports:
+      - "7700:7700"
+    volumes:
+      - meili_data:/meili_data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7700/health"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # MinIO Object Storage
+  minio:
+    image: minio/minio:RELEASE.2024-01-16T16-07-38Z
+    container_name: syno_minio
+    restart: always
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio_data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # Core API Microservice
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: syno_api
+    restart: always
+    environment:
+      NODE_ENV: development
+      PORT: 3000
+      DATABASE_URL: postgresql://syno_user:syno_password@postgres:5432/synocommerce?schema=public
+      REDIS_URL: redis://redis:6379
+      MEILISEARCH_HOST: http://meilisearch:7700
+      MINIO_ENDPOINT: minio
+    ports:
+      - "3000:3000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      meilisearch:
+        condition: service_healthy
+
+  # Admin Platform Dashboard
+  admin:
+    build:
+      context: .
+      dockerfile: apps/admin/Dockerfile
+    container_name: syno_admin
+    restart: always
+    environment:
+      NODE_ENV: development
+      PORT: 3001
+      NEXT_PUBLIC_API_URL: http://localhost:3000/api
+    ports:
+      - "3001:3001"
+    depends_on:
+      - api
+
+  # Headless Storefront
+  storefront:
+    build:
+      context: .
+      dockerfile: apps/storefront/Dockerfile
+    container_name: syno_storefront
+    restart: always
+    environment:
+      NODE_ENV: development
+      PORT: 3002
+      NEXT_PUBLIC_API_URL: http://localhost:3000/api
+    ports:
+      - "3002:3002"
+    depends_on:
+      - api
+
+  # Background Asynchronous Workers
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.worker
+    container_name: syno_worker
+    restart: always
+    environment:
+      NODE_ENV: development
+      DATABASE_URL: postgresql://syno_user:syno_password@postgres:5432/synocommerce?schema=public
+      REDIS_URL: redis://redis:6379
+    depends_on:
+      - postgres
+      - redis
+
+volumes:
+  postgres_data:
+  redis_data:
+  meili_data:
+  minio_data:

@@ -35,7 +35,12 @@
       "@storefront/*": ["apps/storefront/src/*"],
       "@tools/*": ["tools/*"],
       "@operations/*": ["platform/operations/*"],
-      "@integrations/*": ["src/integrations/*"]
+      "@integrations/*": ["src/integrations/*"],
+      "@cms/*": ["src/modules/cms/*"],
+      "@installer/*": ["tools/installer/*"],
+      "@marketplace/*": ["tools/marketplace/*"],
+      "@kalyan-ayurvedic": ["stores/kalyan-ayurvedic/index.ts"],
+      "@kalyan-ayurvedic/*": ["stores/kalyan-ayurvedic/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

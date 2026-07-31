@@ -8,7 +8,9 @@
     "npm": ">=10.0.0"
   },
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "npm run dev:admin",
+    "dev:admin": "npm run --prefix apps/admin dev",
+    "dev:storefront": "npm run --prefix apps/storefront dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
