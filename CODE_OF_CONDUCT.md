@@ -1,18 +1,5 @@
-# Code of Conduct
+# Contributor Covenant Code of Conduct
 
-## Our Standard
+## Our Pledge
 
-SynoCommerce contributors are expected to communicate professionally, review respectfully, and prioritize shared engineering quality over personal preference.
-
-## Expected Behavior
-
-- Be respectful and constructive
-- Focus feedback on code and architecture
-- Document decisions and tradeoffs clearly
-- Escalate security or compliance concerns promptly
-
-## Unacceptable Behavior
-
-- Harassment or discrimination
-- Dismissive review behavior
-- Sharing confidential customer or platform information
+We as contributors and maintainers pledge to make participation in SynoCommerce a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
