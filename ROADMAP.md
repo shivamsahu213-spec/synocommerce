@@ -1,7 +1,18 @@
-# SynoCommerce Platform Roadmap
+# SynoCommerce Product Roadmap
 
-## Release Milestones
+## v1.0.0 GA (Current Release)
+- [x] Clean Architecture DDD Core
+- [x] Enterprise Commerce Engine & Headless Storefront
+- [x] Enterprise AI Platform & 128-dim Vector Search
+- [x] Enterprise Integration Hub (SAP, Salesforce, DLQ)
+- [x] Enterprise Workflow Automation & Approval Engine
+- [x] Enterprise B2B Commerce & Corporate Accounts
+- [x] Enterprise Omnichannel Retail & POS Platform
+- [x] Enterprise API Platform & Developer Portal
+- [x] Enterprise Observability & SRE Platform
+- [x] Enterprise Security & AES-256-GCM Vault
+- [x] Enterprise DevOps & CI/CD Pipelines
 
-- **v1.0.0-rc1 (Current)**: Enterprise Core, Commerce Engine, IAM, Admin Platform, Storefront, CLI Tooling, Operations, and Integration Platform.
-- **v1.0.0 (GA)**: General Availability release with production PostgreSQL/Redis container configurations.
-- **v1.1.0**: Enhanced B2B Quote Management & Multi-Warehouse Fulfillment Optimizations.
+## v1.1.0 (Q3 2026)
+- [ ] Admin App Live Drag-and-Drop Visual Page Builder Iframe
+- [ ] WebUSB / WebBluetooth Direct Thermal Receipt Printer Drivers

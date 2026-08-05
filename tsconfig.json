@@ -50,6 +50,8 @@
       "@security/*": ["src/modules/security/*"],
       "@devops/*": ["platform/devops/*"],
       "@docs/*": ["apps/docs/src/*"],
+      "@website/*": ["apps/website/src/*"],
+      "@cloud/*": ["apps/cloud/src/*"],
       "@portal/*": ["apps/portal/src/*"],
       "@starter-fashion/*": ["stores/starter-fashion/*"],
       "@starter-electronics/*": ["stores/starter-electronics/*"],
