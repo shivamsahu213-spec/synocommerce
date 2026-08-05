@@ -104,7 +104,11 @@ export function Button({ children, variant = 'primary', onClick }: ButtonProps) 
 
 // --- App Layout Wrapper Component ---
 export interface AppLayoutProps {
+<<<<<<< HEAD
   activeTab: 'dashboard' | 'products' | 'orders' | 'customers' | 'inventory' | 'categories' | 'collections' | 'discounts' | 'analytics' | 'low-code' | 'migration' | 'search';
+=======
+  activeTab: 'dashboard' | 'products' | 'orders' | 'customers' | 'inventory' | 'categories' | 'analytics' | 'low-code' | 'migration' | 'search';
+>>>>>>> origin/feature/categories-ui
   title: string;
   subtitle?: string | undefined;
   actions?: ReactNode | undefined;
@@ -122,11 +126,16 @@ export function AppLayout({ activeTab, title, actions, children }: AppLayoutProp
           </div>
           <div>
             <div style={{ fontWeight: 'bold', fontSize: '1.1rem', color: '#F3F4F6' }}>SynoCommerce</div>
+<<<<<<< HEAD
             <div style={{ fontSize: '0.75rem', color: '#9CA3AF' }}>Design System Integration</div>
+=======
+            <div style={{ fontSize: '0.75rem', color: '#9CA3AF' }}>Category Studio</div>
+>>>>>>> origin/feature/categories-ui
           </div>
         </div>
 
         <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', flex: 1 }}>
+<<<<<<< HEAD
           <a
             href="/dashboard"
             style={{
@@ -193,6 +202,15 @@ export function AppLayout({ activeTab, title, actions, children }: AppLayoutProp
             🏬 Inventory & Stock
           </a>
           <a
+=======
+          <a href="/dashboard" style={{ padding: '0.75rem 1rem', borderRadius: '6px', color: '#9CA3AF', textDecoration: 'none' }}>
+            📊 Executive Dashboard
+          </a>
+          <a href="/products" style={{ padding: '0.75rem 1rem', borderRadius: '6px', color: '#9CA3AF', textDecoration: 'none' }}>
+            📦 Products & Catalog
+          </a>
+          <a
+>>>>>>> origin/feature/categories-ui
             href="/categories"
             style={{
               padding: '0.75rem 1rem',
@@ -205,6 +223,7 @@ export function AppLayout({ activeTab, title, actions, children }: AppLayoutProp
           >
             🗂️ Categories & Taxonomy
           </a>
+<<<<<<< HEAD
           <a
             href="/collections"
             style={{
@@ -243,6 +262,10 @@ export function AppLayout({ activeTab, title, actions, children }: AppLayoutProp
             }}
           >
             📈 Business Intelligence
+=======
+          <a href="/orders" style={{ padding: '0.75rem 1rem', borderRadius: '6px', color: '#9CA3AF', textDecoration: 'none' }}>
+            🛍️ Orders & Shipments
+>>>>>>> origin/feature/categories-ui
           </a>
         </nav>
       </aside>
