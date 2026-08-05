@@ -49,6 +49,7 @@
       "@observability/*": ["src/modules/observability/*"],
       "@security/*": ["src/modules/security/*"],
       "@devops/*": ["platform/devops/*"],
+      "@analytics/*": ["src/modules/analytics/*"],
       "@docs/*": ["apps/docs/src/*"],
       "@website/*": ["apps/website/src/*"],
       "@cloud/*": ["apps/cloud/src/*"],
