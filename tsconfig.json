@@ -48,6 +48,7 @@
       "@api-platform/*": ["src/modules/api-platform/*"],
       "@observability/*": ["src/modules/observability/*"],
       "@security/*": ["src/modules/security/*"],
+      "@devops/*": ["platform/devops/*"],
       "@portal/*": ["apps/portal/src/*"],
       "@starter-fashion/*": ["stores/starter-fashion/*"],
       "@starter-electronics/*": ["stores/starter-electronics/*"],

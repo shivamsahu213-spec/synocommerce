@@ -1,0 +1,69 @@
+name: SynoCommerce Enterprise CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, release/* ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  quality-and-test:
+    name: Typecheck & Automated Test Matrix
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: TypeScript Strict Mode Typecheck
+        run: node node_modules/typescript/bin/tsc --noEmit
+
+      - name: Run Full Platform Test Suite
+        run: |
+          npx tsx --test src/modules/iam/tests/iam.test.ts \
+                         apps/admin/src/tests/admin.test.ts \
+                         src/modules/commerce-engine/tests/commerce-engine.test.ts \
+                         apps/storefront/src/tests/storefront.test.ts \
+                         tools/cli/tests/cli.test.ts \
+                         platform/operations/tests/operations.test.ts \
+                         src/integrations/tests/integrations.test.ts \
+                         stores/kalyan-ayurvedic/tests/kalyan-store.test.ts \
+                         src/modules/cms/tests/cms.test.ts \
+                         tools/installer/tests/installer.test.ts \
+                         src/infrastructure/tests/production-readiness.test.ts \
+                         platform/saas/tests/saas.test.ts \
+                         src/modules/ai/tests/ai.test.ts \
+                         src/modules/integration-hub/tests/integration-hub.test.ts \
+                         src/modules/workflows/tests/workflows.test.ts \
+                         src/modules/b2b/tests/b2b.test.ts \
+                         src/modules/omnichannel/tests/omnichannel.test.ts \
+                         src/modules/api-platform/tests/api-platform.test.ts \
+                         src/modules/observability/tests/observability.test.ts \
+                         src/modules/security/tests/security.test.ts \
+                         platform/devops/tests/devops.test.ts
+
+  docker-build-publish:
+    name: Multi-Stage Docker Build & SBOM Sign
+    needs: quality-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and Push Production Container
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ghcr.io/${{ github.repository }}:latest,ghcr.io/${{ github.repository }}:${{ github.sha }}
