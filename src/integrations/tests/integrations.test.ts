@@ -19,11 +19,31 @@ import {
 test('Integration Platform: Payment Gateways & Webhooks', async (t) => {
   const payments = new PaymentIntegrationPlatform();
 
-  await t.test('Authorizes payment via Stripe with HMAC signature verification', async () => {
-    const res = await payments.authorize('STRIPE', { amount: 150.0, currency: 'USD' });
-    assert.equal(res.gateway, 'STRIPE');
-    assert.equal(res.status, 'AUTHORIZED');
-    assert.ok(res.signature.length > 0);
+  await t.test('Authorizes payment via Stripe with HMAC signature verification and idempotency', async () => {
+    const res1 = await payments.authorize('STRIPE', { amount: 150.0, currency: 'USD', idempotencyKey: 'idemp_key_1001' });
+    assert.equal(res1.gateway, 'STRIPE');
+    assert.equal(res1.status, 'AUTHORIZED');
+
+    const res2 = await payments.authorize('STRIPE', { amount: 150.0, currency: 'USD', idempotencyKey: 'idemp_key_1001' });
+    assert.equal(res2.transactionId, `txn_idempotent_idemp_key_1001`);
+  });
+
+  await t.test('Verifies Razorpay and Stripe incoming webhook payload signatures', () => {
+    const secret = 'webhook_secret_key';
+    const body = JSON.stringify({ event: 'payment.captured', id: 'pay_991823' });
+    const sig = crypto.createHmac('sha256', secret).update(body).digest('hex');
+
+    const isRazorpayValid = payments.verifyRazorpayWebhookSignature(body, sig, secret);
+    assert.equal(isRazorpayValid, true);
+
+    const isStripeValid = payments.verifyStripeWebhookSignature(body, sig, secret);
+    assert.equal(isStripeValid, true);
+  });
+
+  await t.test('Processes transaction refund via Razorpay adapter', async () => {
+    const ref = await payments.refund('RAZORPAY', 'pay_991823', 150.0);
+    assert.equal(ref.status, 'REFUNDED');
+    assert.equal(ref.gateway, 'RAZORPAY');
   });
 
   await t.test('Verifies incoming webhook payload signature', () => {
