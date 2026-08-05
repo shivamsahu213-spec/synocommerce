@@ -12,7 +12,7 @@ export interface StatCardProps {
   value: string;
   change?: string | undefined;
   subtext?: string | undefined;
-  variant?: 'default' | 'success' | 'warning' | 'danger' | undefined;
+  variant?: 'default' | 'success' | 'warning' | 'danger' | 'info' | undefined;
 }
 
 export function StatCard({ title, value, change, subtext, variant = 'default' }: StatCardProps) {
@@ -20,6 +20,7 @@ export function StatCard({ title, value, change, subtext, variant = 'default' }:
     if (variant === 'success') return '#10B981';
     if (variant === 'danger') return '#EF4444';
     if (variant === 'warning') return '#F59E0B';
+    if (variant === 'info') return '#3B82F6';
     return '#10B981';
   };
 
@@ -103,7 +104,7 @@ export function Button({ children, variant = 'primary', onClick }: ButtonProps) 
 
 // --- App Layout Wrapper Component ---
 export interface AppLayoutProps {
-  activeTab: 'dashboard' | 'products' | 'orders' | 'customers' | 'analytics' | 'low-code' | 'migration' | 'search';
+  activeTab: 'dashboard' | 'products' | 'orders' | 'customers' | 'inventory' | 'categories' | 'collections' | 'discounts' | 'analytics' | 'low-code' | 'migration' | 'search';
   title: string;
   subtitle?: string | undefined;
   actions?: ReactNode | undefined;
@@ -121,7 +122,7 @@ export function AppLayout({ activeTab, title, actions, children }: AppLayoutProp
           </div>
           <div>
             <div style={{ fontWeight: 'bold', fontSize: '1.1rem', color: '#F3F4F6' }}>SynoCommerce</div>
-            <div style={{ fontSize: '0.75rem', color: '#9CA3AF' }}>Design System Studio</div>
+            <div style={{ fontSize: '0.75rem', color: '#9CA3AF' }}>Design System Integration</div>
           </div>
         </div>
 
@@ -133,6 +134,7 @@ export function AppLayout({ activeTab, title, actions, children }: AppLayoutProp
               borderRadius: '6px',
               backgroundColor: activeTab === 'dashboard' ? '#1F2937' : 'transparent',
               color: activeTab === 'dashboard' ? '#60A5FA' : '#9CA3AF',
+              fontWeight: activeTab === 'dashboard' ? '600' : 'normal',
               textDecoration: 'none',
             }}
           >
@@ -145,6 +147,7 @@ export function AppLayout({ activeTab, title, actions, children }: AppLayoutProp
               borderRadius: '6px',
               backgroundColor: activeTab === 'products' ? '#1F2937' : 'transparent',
               color: activeTab === 'products' ? '#60A5FA' : '#9CA3AF',
+              fontWeight: activeTab === 'products' ? '600' : 'normal',
               textDecoration: 'none',
             }}
           >
@@ -157,6 +160,7 @@ export function AppLayout({ activeTab, title, actions, children }: AppLayoutProp
               borderRadius: '6px',
               backgroundColor: activeTab === 'orders' ? '#1F2937' : 'transparent',
               color: activeTab === 'orders' ? '#60A5FA' : '#9CA3AF',
+              fontWeight: activeTab === 'orders' ? '600' : 'normal',
               textDecoration: 'none',
             }}
           >
@@ -174,6 +178,71 @@ export function AppLayout({ activeTab, title, actions, children }: AppLayoutProp
             }}
           >
             👥 Customers & LTV
+          </a>
+          <a
+            href="/inventory"
+            style={{
+              padding: '0.75rem 1rem',
+              borderRadius: '6px',
+              backgroundColor: activeTab === 'inventory' ? '#1F2937' : 'transparent',
+              color: activeTab === 'inventory' ? '#60A5FA' : '#9CA3AF',
+              fontWeight: activeTab === 'inventory' ? '600' : 'normal',
+              textDecoration: 'none',
+            }}
+          >
+            🏬 Inventory & Stock
+          </a>
+          <a
+            href="/categories"
+            style={{
+              padding: '0.75rem 1rem',
+              borderRadius: '6px',
+              backgroundColor: activeTab === 'categories' ? '#1F2937' : 'transparent',
+              color: activeTab === 'categories' ? '#60A5FA' : '#9CA3AF',
+              fontWeight: activeTab === 'categories' ? '600' : 'normal',
+              textDecoration: 'none',
+            }}
+          >
+            🗂️ Categories & Taxonomy
+          </a>
+          <a
+            href="/collections"
+            style={{
+              padding: '0.75rem 1rem',
+              borderRadius: '6px',
+              backgroundColor: activeTab === 'collections' ? '#1F2937' : 'transparent',
+              color: activeTab === 'collections' ? '#60A5FA' : '#9CA3AF',
+              fontWeight: activeTab === 'collections' ? '600' : 'normal',
+              textDecoration: 'none',
+            }}
+          >
+            🖼️ Storefront Collections
+          </a>
+          <a
+            href="/discounts"
+            style={{
+              padding: '0.75rem 1rem',
+              borderRadius: '6px',
+              backgroundColor: activeTab === 'discounts' ? '#1F2937' : 'transparent',
+              color: activeTab === 'discounts' ? '#60A5FA' : '#9CA3AF',
+              fontWeight: activeTab === 'discounts' ? '600' : 'normal',
+              textDecoration: 'none',
+            }}
+          >
+            🏷️ Discounts & Rules
+          </a>
+          <a
+            href="/analytics"
+            style={{
+              padding: '0.75rem 1rem',
+              borderRadius: '6px',
+              backgroundColor: activeTab === 'analytics' ? '#1F2937' : 'transparent',
+              color: activeTab === 'analytics' ? '#60A5FA' : '#9CA3AF',
+              fontWeight: activeTab === 'analytics' ? '600' : 'normal',
+              textDecoration: 'none',
+            }}
+          >
+            📈 Business Intelligence
           </a>
         </nav>
       </aside>
