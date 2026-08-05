@@ -3,7 +3,7 @@
  * @module modules/workflows
  */
 
+export * from './approval-engine';
+export * from './rules-engine';
 export * from './types';
 export * from './workflow-engine';
-export * from './rules-engine';
-export * from './approval-engine';

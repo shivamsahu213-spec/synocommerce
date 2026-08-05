@@ -4,6 +4,7 @@
  */
 
 import crypto from 'node:crypto';
+
 import { EncryptedDataEnvelope } from './types';
 
 export class EncryptionVaultEngine {

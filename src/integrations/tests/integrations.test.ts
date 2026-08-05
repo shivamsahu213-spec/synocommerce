@@ -3,16 +3,17 @@
  * @module integrations/tests/integrations.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
+import test from 'node:test';
+
 import {
-  PaymentIntegrationPlatform,
-  ShippingIntegrationPlatform,
-  TaxIntegrationPlatform,
-  SearchIntegrationPlatform,
   EnterpriseCrmErpIntegrationPlatform,
   IdentityIntegrationPlatform,
+  PaymentIntegrationPlatform,
+  SearchIntegrationPlatform,
+  ShippingIntegrationPlatform,
+  TaxIntegrationPlatform,
   TelemetryMonitoringPlatform,
 } from '../index';
 

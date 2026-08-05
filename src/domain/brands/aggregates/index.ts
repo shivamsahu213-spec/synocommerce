@@ -1,4 +1,4 @@
-import { AggregateRoot, Identifier, Slug, SeoMetadata } from '../..';
+import { AggregateRoot, Identifier, SeoMetadata,Slug } from '../..';
 import { IBrand } from '../contracts';
 
 export interface BrandProps {

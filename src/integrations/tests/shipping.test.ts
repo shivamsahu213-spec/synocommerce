@@ -3,15 +3,16 @@
  * @module src/integrations/tests/shipping.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
+import test from 'node:test';
+
 import {
-  ShippingCarrierProvider,
-  WarehouseRouterEngine,
   FulfillmentEngineProcessor,
-  TrackingEngineProcessor,
   ShipmentSecurityEngine,
+  ShippingCarrierProvider,
+  TrackingEngineProcessor,
+  WarehouseRouterEngine,
 } from '../shipping';
 
 test('Enterprise Multi-Carrier Shipping & Fulfillment Platform', async (t) => {

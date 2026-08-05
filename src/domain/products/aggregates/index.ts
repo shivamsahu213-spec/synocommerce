@@ -1,8 +1,8 @@
-import { AggregateRoot, Identifier, Slug, SeoMetadata } from '../..';
-import { ProductVariantEntity } from '../entities';
+import { AggregateRoot, Identifier, SeoMetadata,Slug } from '../..';
 import { IProduct } from '../contracts';
-import { ProductPublicationState, ProductType } from '../types';
+import { ProductVariantEntity } from '../entities';
 import { InvalidProductStateError } from '../errors';
+import { ProductPublicationState, ProductType } from '../types';
 
 export interface ProductProps {
   title: string;

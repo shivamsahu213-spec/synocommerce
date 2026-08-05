@@ -3,8 +3,8 @@
  * @module modules/observability
  */
 
-export * from './types';
 export * from './distributed-tracer';
+export * from './incident-alerting';
 export * from './metrics-collector';
 export * from './structured-logger';
-export * from './incident-alerting';
+export * from './types';

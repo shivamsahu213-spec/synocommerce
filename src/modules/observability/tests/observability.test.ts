@@ -3,13 +3,14 @@
  * @module modules/observability/tests/observability.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import test from 'node:test';
+
 import {
+  IncidentAlertingEngine,
   OpenTelemetryTracerEngine,
   PrometheusMetricsEngine,
   StructuredLoggerEngine,
-  IncidentAlertingEngine,
 } from '../index';
 
 test('Enterprise Observability & SRE Platform', async (t) => {

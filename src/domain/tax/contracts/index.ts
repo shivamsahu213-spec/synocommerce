@@ -8,8 +8,8 @@
  */
 
 import { Money, Percentage } from '../..';
-import { TaxIdentifier, TaxBreakdown } from '../value-objects';
 import { TaxType } from '../types';
+import { TaxBreakdown,TaxIdentifier } from '../value-objects';
 
 /** Configured tax rate for a jurisdiction. */
 export interface ITaxRate {

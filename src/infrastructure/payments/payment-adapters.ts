@@ -7,8 +7,8 @@
  * @module infrastructure/payments/payment-adapters
  */
 
-import { IPaymentPort } from '../../application/ports';
 import { AuthorizePaymentInput, CapturePaymentInput, PaymentDTO } from '../../application/dto';
+import { IPaymentPort } from '../../application/ports';
 import { Result } from '../../application/results';
 
 export abstract class BasePaymentAdapter implements IPaymentPort {

@@ -5,9 +5,10 @@
 
 'use client';
 
+import { Bookmark,Package, Plus, Tag } from 'lucide-react';
 import React, { useState } from 'react';
-import { Plus, Package, Tag, Bookmark } from 'lucide-react';
-import { DataTable, ColumnDef } from '../../components/shared/data-table';
+
+import { ColumnDef,DataTable } from '../../components/shared/data-table';
 import { INITIAL_PRODUCTS, ProductItem } from '../../lib/data-store';
 import { formatCurrency } from '../../lib/utils';
 

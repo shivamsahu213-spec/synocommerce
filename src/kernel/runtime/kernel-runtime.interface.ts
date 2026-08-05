@@ -6,14 +6,14 @@
  * @module kernel/runtime/kernel-runtime.interface
  */
 
-import { IModuleRegistry } from '../modules';
-import { IPluginRegistry } from '../plugins';
-import { ITenantRegistry } from '../tenants';
-import { IStoreRegistry } from '../stores';
-import { ILicenseManager } from '../licensing';
-import { IFeatureManager } from '../feature-flags';
 import { IKernelConfigurationManager } from '../configuration';
 import { IKernelDiagnostics } from '../diagnostics';
+import { IFeatureManager } from '../feature-flags';
+import { ILicenseManager } from '../licensing';
+import { IModuleRegistry } from '../modules';
+import { IPluginRegistry } from '../plugins';
+import { IStoreRegistry } from '../stores';
+import { ITenantRegistry } from '../tenants';
 
 export interface ICommerceKernelRuntime {
   readonly isInitialized: boolean;

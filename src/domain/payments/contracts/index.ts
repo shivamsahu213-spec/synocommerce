@@ -10,13 +10,13 @@
 import { Money } from '../..';
 import { OrderIdentifier } from '../../orders/value-objects';
 import {
-  PaymentIdentifier,
-  TransactionIdentifier,
-  PaymentStatus,
-  PaymentFailureReason,
   FraudCheck,
+  PaymentFailureReason,
+  PaymentIdentifier,
   PaymentReceipt,
+  PaymentStatus,
   PaymentToken,
+  TransactionIdentifier,
 } from '../value-objects';
 
 /** Stored / tokenized payment instrument metadata (no raw PAN). */

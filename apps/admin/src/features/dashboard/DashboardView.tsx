@@ -5,9 +5,10 @@
 
 'use client';
 
+import { Activity, AlertTriangle, ArrowUpRight, CheckCircle2,DollarSign, ShoppingCart, TrendingUp, Users } from 'lucide-react';
 import React from 'react';
-import { DollarSign, ShoppingCart, Users, Activity, TrendingUp, AlertTriangle, ArrowUpRight, CheckCircle2 } from 'lucide-react';
-import { INITIAL_PRODUCTS, INITIAL_ORDERS } from '../../lib/data-store';
+
+import { INITIAL_ORDERS,INITIAL_PRODUCTS } from '../../lib/data-store';
 import { formatCurrency } from '../../lib/utils';
 
 export function DashboardView() {

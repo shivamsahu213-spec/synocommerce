@@ -5,8 +5,9 @@
 
 'use client';
 
+import { AlertCircle,CheckCircle, Power, Puzzle, RefreshCw } from 'lucide-react';
 import React, { useState } from 'react';
-import { Puzzle, CheckCircle, Power, RefreshCw, AlertCircle } from 'lucide-react';
+
 import { INITIAL_PLUGINS, PluginItem } from '../../lib/data-store';
 
 export function PluginsView() {

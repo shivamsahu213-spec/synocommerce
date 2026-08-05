@@ -3,8 +3,9 @@
  * @module infrastructure/tests/production-readiness.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import test from 'node:test';
+
 import { ProductionSettingsManager } from '../config/production-settings';
 
 test('Production Readiness Settings & Integration Credentials', async (t) => {

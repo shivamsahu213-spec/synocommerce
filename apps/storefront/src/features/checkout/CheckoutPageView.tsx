@@ -5,12 +5,13 @@
 
 'use client';
 
-import React, { useState } from 'react';
+import { CheckCircle2, CreditCard, Lock,ShieldCheck, Truck } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import { ShieldCheck, CreditCard, Truck, CheckCircle2, Lock } from 'lucide-react';
-import { useStorefront } from '../../providers/storefront-provider';
-import { checkoutEngine, OrderRecord, CartItem } from '../../lib/commerce-client';
+import React, { useState } from 'react';
+
+import { CartItem,checkoutEngine, OrderRecord } from '../../lib/commerce-client';
 import { formatCurrency } from '../../lib/utils';
+import { useStorefront } from '../../providers/storefront-provider';
 
 export function CheckoutPageView() {
   const router = useRouter();

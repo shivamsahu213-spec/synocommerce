@@ -1,4 +1,5 @@
 import { createAppError } from '@shared/lib/errors/create-app-error';
+
 import type { AppError } from '@/types/error';
 
 export function mapHttpError(statusCode: number, details?: Record<string, unknown>): AppError {

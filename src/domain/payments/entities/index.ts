@@ -12,8 +12,8 @@ import {
   IPaymentTransaction,
 } from '../contracts';
 import {
-  TransactionIdentifier,
   PaymentFailureReason,
+  TransactionIdentifier,
 } from '../value-objects';
 
 export class PaymentAttemptEntity extends Entity<Identifier> implements IPaymentAttempt {

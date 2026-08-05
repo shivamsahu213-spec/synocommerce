@@ -4,6 +4,7 @@
  */
 
 import crypto from 'node:crypto';
+
 import { SynoPackage } from './types';
 
 export class PluginSigningEngine {

@@ -1,6 +1,6 @@
-import { IBaseRepository, Identifier, Currency } from '../..';
+import { Currency,IBaseRepository, Identifier } from '../..';
 import { PriceBookAggregate } from '../aggregates';
-import { IPriceRule, ITaxClass, ICurrencyConversion } from '../contracts';
+import { ICurrencyConversion,IPriceRule, ITaxClass } from '../contracts';
 
 export interface IPriceBookRepository extends IBaseRepository<PriceBookAggregate, Identifier> {
   findByCode(code: string): Promise<PriceBookAggregate | null>;

@@ -3,9 +3,9 @@
  * @module modules/iam/application/services/mfa.service
  */
 
-import { UserIdentifier } from '../../domain/value-objects';
-import { IUserRepository, IAuditLogRepository } from '../../domain/repositories';
 import { AuditLogEntity } from '../../domain/entities';
+import { IAuditLogRepository,IUserRepository } from '../../domain/repositories';
+import { UserIdentifier } from '../../domain/value-objects';
 import { TotpUtil } from './totp.util';
 
 export interface MfaEnableResultDto {

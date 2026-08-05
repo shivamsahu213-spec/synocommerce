@@ -7,7 +7,7 @@
  * @module domain/orders/value-objects
  */
 
-import { Identifier, Money, Address } from '../..';
+import { Address,Identifier, Money } from '../..';
 
 export class OrderIdentifier extends Identifier {}
 

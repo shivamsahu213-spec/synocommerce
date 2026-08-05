@@ -5,12 +5,13 @@
 
 'use client';
 
-import React from 'react';
+import { ArrowRight, Heart, RotateCcw,ShieldCheck, ShoppingBag, Sparkles, Truck } from 'lucide-react';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, ShoppingBag, Heart, ShieldCheck, Truck, RotateCcw } from 'lucide-react';
+import React from 'react';
+
 import { STOREFRONT_PRODUCTS } from '../../lib/commerce-client';
-import { useStorefront } from '../../providers/storefront-provider';
 import { formatCurrency } from '../../lib/utils';
+import { useStorefront } from '../../providers/storefront-provider';
 
 export function HomePageView() {
   const { addToCart, toggleWishlist, wishlist, currency } = useStorefront();

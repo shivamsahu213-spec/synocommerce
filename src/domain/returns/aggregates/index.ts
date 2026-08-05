@@ -9,25 +9,25 @@
 
 import { AggregateRoot } from '../..';
 import { OrderIdentifier } from '../../orders/value-objects';
-import { IReturnRequest, IReturnItem } from '../contracts';
-import {
-  ReturnIdentifier,
-  ReturnStatus,
-  ReturnAuthorization,
-} from '../value-objects';
+import { IReturnItem,IReturnRequest } from '../contracts';
 import {
   ReturnApprovalFailedError,
-  ReturnRejectionFailedError,
-  ReturnReceiveFailedError,
   ReturnCompletionFailedError,
+  ReturnReceiveFailedError,
+  ReturnRejectionFailedError,
 } from '../errors';
 import {
-  ReturnRequestedEvent,
-  ReturnApprovedEvent,
-  ReturnRejectedEvent,
   ItemsReceivedEvent,
+  ReturnApprovedEvent,
   ReturnCompletedEvent,
+  ReturnRejectedEvent,
+  ReturnRequestedEvent,
 } from '../events';
+import {
+  ReturnAuthorization,
+  ReturnIdentifier,
+  ReturnStatus,
+} from '../value-objects';
 
 export class ReturnAggregate
   extends AggregateRoot<ReturnIdentifier>

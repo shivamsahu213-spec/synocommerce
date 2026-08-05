@@ -3,5 +3,5 @@
  * @module infrastructure/messaging
  */
 
-export * from './outbox-inbox';
 export * from './event-messaging';
+export * from './outbox-inbox';

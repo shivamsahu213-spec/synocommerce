@@ -1,5 +1,5 @@
-import { WeightUnit } from '../types';
 import { InvalidValueObjectError } from '../errors';
+import { WeightUnit } from '../types';
 
 /**
  * Weight Measurement Value Object.

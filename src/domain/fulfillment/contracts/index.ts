@@ -8,8 +8,8 @@
  */
 
 import { SKU } from '../..';
-import { OrderIdentifier } from '../../orders/value-objects';
 import { WarehouseIdentifier } from '../../inventory/value-objects';
+import { OrderIdentifier } from '../../orders/value-objects';
 import {
   FulfillmentIdentifier,
   FulfillmentStatus,

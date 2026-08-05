@@ -3,20 +3,20 @@
  * @module application/commands/commerce.commands
  */
 
-import { ICommand, CommandMetadata } from './command.interface';
 import {
   AddItemToCartInput,
-  RemoveItemFromCartInput,
-  MergeCartInput,
-  StartCheckoutInput,
-  PlaceOrderInput,
+  ApproveRefundInput,
   AuthorizePaymentInput,
   CapturePaymentInput,
   CreateShipmentInput,
-  RequestReturnInput,
-  ApproveRefundInput,
   GenerateInvoiceInput,
+  MergeCartInput,
+  PlaceOrderInput,
+  RemoveItemFromCartInput,
+  RequestReturnInput,
+  StartCheckoutInput,
 } from '../dto';
+import { CommandMetadata,ICommand } from './command.interface';
 
 export abstract class BaseCommand<TResult = void> implements ICommand<TResult> {
   public readonly metadata: CommandMetadata;
