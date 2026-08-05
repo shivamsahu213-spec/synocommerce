@@ -3,7 +3,7 @@
  * @module modules/b2b/company-engine
  */
 
-import { CompanyAccountRecord, B2bPaymentTerms } from './types';
+import { B2bPaymentTerms,CompanyAccountRecord } from './types';
 
 export class B2bCompanyEngine {
   private readonly _companies = new Map<string, CompanyAccountRecord>();

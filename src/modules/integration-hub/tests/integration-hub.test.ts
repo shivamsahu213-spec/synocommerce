@@ -3,13 +3,14 @@
  * @module modules/integration-hub/tests/integration-hub.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import test from 'node:test';
+
 import {
-  SyncEngineProcessor,
-  ErpConnectorEngine,
   CrmConnectorEngine,
+  ErpConnectorEngine,
   MarketplaceLogisticsConnectorEngine,
+  SyncEngineProcessor,
 } from '../index';
 
 test('Enterprise Integration Hub: Sync Engine & System Connectors', async (t) => {

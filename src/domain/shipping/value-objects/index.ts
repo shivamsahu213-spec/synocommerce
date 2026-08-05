@@ -7,7 +7,7 @@
  * @module domain/shipping/value-objects
  */
 
-import { Identifier, Money, InvalidValueObjectError } from '../..';
+import { Identifier, InvalidValueObjectError,Money } from '../..';
 
 /** Strongly-typed identity for ShipmentAggregate. */
 export class ShipmentIdentifier extends Identifier {}

@@ -6,10 +6,10 @@
  * @module infrastructure/repositories/payment.repository
  */
 
-import { OrderIdentifier } from '../../domain/orders';
-import { PaymentAggregate, PaymentIdentifier, IPaymentRepository } from '../../domain/payments';
-import { ShipmentAggregate, ShipmentIdentifier, IShipmentRepository, TrackingNumber } from '../../domain/shipping';
 import { FulfillmentAggregate, FulfillmentIdentifier, IFulfillmentRepository } from '../../domain/fulfillment';
+import { OrderIdentifier } from '../../domain/orders';
+import { IPaymentRepository,PaymentAggregate, PaymentIdentifier } from '../../domain/payments';
+import { IShipmentRepository, ShipmentAggregate, ShipmentIdentifier, TrackingNumber } from '../../domain/shipping';
 
 export class PaymentRepositoryAdapter implements IPaymentRepository {
   private readonly _store = new Map<string, PaymentAggregate>();

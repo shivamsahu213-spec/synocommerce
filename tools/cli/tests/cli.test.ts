@@ -3,9 +3,10 @@
  * @module tools/cli/tests/cli.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
-import { runCli, CodeGeneratorEngine, DoctorEngine, PackagerEngine } from '../index';
+import test from 'node:test';
+
+import { CodeGeneratorEngine, DoctorEngine, PackagerEngine,runCli } from '../index';
 
 test('Developer Platform: Syno CLI Commands', async (t) => {
   await t.test('Executes syno doctor command and returns passed diagnostic checks', () => {

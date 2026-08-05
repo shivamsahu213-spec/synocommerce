@@ -3,12 +3,14 @@
  * @module apps/admin/src/app/layout
  */
 
-import React from 'react';
 import './globals.css';
+
+import React from 'react';
+
+import { Header } from '../navigation/header';
+import { Sidebar } from '../navigation/sidebar';
 import { AuthProvider } from '../providers/auth-provider';
 import { ThemeProvider } from '../providers/theme-provider';
-import { Sidebar } from '../navigation/sidebar';
-import { Header } from '../navigation/header';
 
 export const metadata = {
   title: 'SynoCommerce Admin Platform',

@@ -1,5 +1,5 @@
-import { Currency } from './currency.vo';
 import { InvalidValueObjectError } from '../errors';
+import { Currency } from './currency.vo';
 
 /**
  * Immutable Money Value Object representation.

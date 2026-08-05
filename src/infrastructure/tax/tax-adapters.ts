@@ -6,8 +6,8 @@
  * @module infrastructure/tax/tax-adapters
  */
 
-import { ITaxPort } from '../../application/ports';
 import { CalculateTaxInput, TaxCalculationDTO } from '../../application/dto';
+import { ITaxPort } from '../../application/ports';
 import { Result } from '../../application/results';
 
 export class AvalaraTaxAdapter implements ITaxPort {

@@ -3,8 +3,9 @@
  * @module platform/devops/tests/devops.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import test from 'node:test';
+
 import {
   DevOpsEngineProcessor,
   HelmK8sGeneratorEngine,

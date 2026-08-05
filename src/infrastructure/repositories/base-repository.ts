@@ -6,7 +6,7 @@
  * @module infrastructure/repositories/base-repository
  */
 
-import { Identifier, AggregateRoot } from '../../domain/shared-domain';
+import { AggregateRoot,Identifier } from '../../domain/shared-domain';
 import { IDatabaseAdapter } from '../persistence/database.adapter';
 
 export abstract class AbstractBaseRepository<TId extends Identifier, TAggregate extends AggregateRoot<TId>> {

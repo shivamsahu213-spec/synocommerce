@@ -3,7 +3,7 @@
  * @module modules/cms/renderer
  */
 
-import { CmsPageDocument, CmsBlockInstance } from './types';
+import { CmsBlockInstance,CmsPageDocument } from './types';
 
 export interface RenderedBlockComponent {
   blockId: string;

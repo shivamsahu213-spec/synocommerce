@@ -4,6 +4,7 @@
  */
 
 import crypto from 'node:crypto';
+
 import { SbomRecord } from './types';
 
 export class SbomGeneratorEngine {

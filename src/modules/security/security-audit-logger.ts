@@ -4,6 +4,7 @@
  */
 
 import crypto from 'node:crypto';
+
 import { SecurityAuditEvent } from './types';
 
 export class SecurityAuditLoggerEngine {

@@ -3,12 +3,12 @@
  * @module infrastructure/adapters
  */
 
-export * from '../payments';
-export * from '../shipping';
-export * from '../tax';
-export * from '../search';
-export * from '../storage';
-export * from '../email';
-export * from '../sms';
-export * from '../notifications';
 export * from '../analytics';
+export * from '../email';
+export * from '../notifications';
+export * from '../payments';
+export * from '../search';
+export * from '../shipping';
+export * from '../sms';
+export * from '../storage';
+export * from '../tax';

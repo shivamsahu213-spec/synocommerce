@@ -1,6 +1,6 @@
-import { SKU, DateRange } from '../..';
-import { InventoryIdentifier, ReservationIdentifier, WarehouseIdentifier, StockLevel } from '../value-objects';
+import { DateRange,SKU } from '../..';
 import { InventoryMovementType, WarehouseType } from '../types';
+import { InventoryIdentifier, ReservationIdentifier, StockLevel,WarehouseIdentifier } from '../value-objects';
 
 export interface IInventoryLocation {
   readonly locationId: string;

@@ -3,6 +3,6 @@
  * @module tools/installer
  */
 
-export * from './installer-engine';
 export * from './ai-generator';
+export * from './installer-engine';
 export * from './update-engine';

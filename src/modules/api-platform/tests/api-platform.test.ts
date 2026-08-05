@@ -3,13 +3,14 @@
  * @module modules/api-platform/tests/api-platform.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import test from 'node:test';
+
 import {
   ApiGatewayEngine,
   OpenApiGeneratorEngine,
-  WebhookDeliveryEngine,
   SdkGeneratorEngine,
+  WebhookDeliveryEngine,
 } from '../index';
 
 test('Enterprise API Platform & Developer Portal', async (t) => {

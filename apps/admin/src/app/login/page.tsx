@@ -5,9 +5,10 @@
 
 'use client';
 
-import React, { useState } from 'react';
+import { Lock, Mail,Sparkles } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import { Sparkles, Lock, Mail } from 'lucide-react';
+import React, { useState } from 'react';
+
 import { authService } from '../../lib/iam-client';
 import { useAuth } from '../../providers/auth-provider';
 

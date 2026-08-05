@@ -7,8 +7,8 @@
 import { IBaseRepository } from '../..';
 import { OrderIdentifier } from '../../orders/value-objects';
 import { PaymentIdentifier } from '../../payments/value-objects';
-import { RefundIdentifier } from '../value-objects';
 import { RefundAggregate } from '../aggregates';
+import { RefundIdentifier } from '../value-objects';
 
 export interface IRefundRepository
   extends IBaseRepository<RefundAggregate, RefundIdentifier>

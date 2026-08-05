@@ -3,15 +3,16 @@
  * @module platform/operations/tests/operations.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import test from 'node:test';
+
 import {
-  TenantProvisionerEngine,
-  SubscriptionBillingEngine,
-  LicenseManagerEngine,
-  ObservabilityEngine,
   BackupManagerEngine,
   DeploymentOrchestratorEngine,
+  LicenseManagerEngine,
+  ObservabilityEngine,
+  SubscriptionBillingEngine,
+  TenantProvisionerEngine,
 } from '../index';
 
 test('Operations Platform: Multi-Tenant & Store Provisioning', async (t) => {

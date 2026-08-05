@@ -5,9 +5,10 @@
 
 'use client';
 
+import { CreditCard, FileText, RefreshCw,ShoppingBag, Truck } from 'lucide-react';
 import React, { useState } from 'react';
-import { ShoppingBag, CreditCard, Truck, FileText, RefreshCw } from 'lucide-react';
-import { DataTable, ColumnDef } from '../../components/shared/data-table';
+
+import { ColumnDef,DataTable } from '../../components/shared/data-table';
 import { INITIAL_ORDERS, OrderItem } from '../../lib/data-store';
 import { formatCurrency, formatDate } from '../../lib/utils';
 

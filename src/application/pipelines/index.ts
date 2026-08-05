@@ -3,5 +3,5 @@
  * @module application/pipelines
  */
 
-export * from './pipeline.interface';
 export * from './behaviors';
+export * from './pipeline.interface';

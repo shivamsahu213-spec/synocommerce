@@ -3,5 +3,5 @@
  * @module application/queries
  */
 
-export * from './query.interface';
 export * from './commerce.queries';
+export * from './query.interface';

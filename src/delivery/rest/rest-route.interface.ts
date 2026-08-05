@@ -3,8 +3,8 @@
  * @module delivery/rest/rest-route.interface
  */
 
-import { HttpMethod } from '../types';
 import { IDeliveryMiddleware } from '../middleware';
+import { HttpMethod } from '../types';
 
 export interface IRestEndpoint {
   readonly path: string;

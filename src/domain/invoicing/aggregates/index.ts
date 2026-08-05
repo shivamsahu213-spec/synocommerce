@@ -11,23 +11,23 @@ import { AggregateRoot } from '../..';
 import { OrderIdentifier } from '../../orders/value-objects';
 import { IInvoice, IInvoiceLine } from '../contracts';
 import {
+  InvoiceCancelFailedError,
+  InvoiceIssueFailedError,
+  InvoicePaymentFailedError,
+  InvoiceVoidFailedError,
+} from '../errors';
+import {
+  InvoiceCancelledEvent,
+  InvoiceGeneratedEvent,
+  InvoicePaidEvent,
+  InvoiceVoidedEvent,
+} from '../events';
+import {
   InvoiceIdentifier,
   InvoiceNumber,
   InvoiceStatus,
   InvoiceTotals,
 } from '../value-objects';
-import {
-  InvoiceIssueFailedError,
-  InvoicePaymentFailedError,
-  InvoiceCancelFailedError,
-  InvoiceVoidFailedError,
-} from '../errors';
-import {
-  InvoiceGeneratedEvent,
-  InvoicePaidEvent,
-  InvoiceCancelledEvent,
-  InvoiceVoidedEvent,
-} from '../events';
 
 export class InvoiceAggregate
   extends AggregateRoot<InvoiceIdentifier>

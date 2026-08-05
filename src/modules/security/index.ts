@@ -3,8 +3,8 @@
  * @module modules/security
  */
 
-export * from './types';
-export * from './encryption-vault';
 export * from './compliance-privacy';
-export * from './threat-zero-trust';
+export * from './encryption-vault';
 export * from './security-audit-logger';
+export * from './threat-zero-trust';
+export * from './types';

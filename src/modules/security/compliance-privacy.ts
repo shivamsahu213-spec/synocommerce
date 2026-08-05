@@ -3,7 +3,7 @@
  * @module modules/security/compliance-privacy
  */
 
-import { PrivacyExportRecord, ComplianceStandard } from './types';
+import { ComplianceStandard,PrivacyExportRecord } from './types';
 
 export class CompliancePrivacyEngine {
   public anonymizeUserData(userData: Record<string, any>): Record<string, any> {

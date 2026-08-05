@@ -1,5 +1,5 @@
 import { SKU } from '../..';
-import { WarehouseIdentifier, ReservationIdentifier } from '../value-objects';
+import { ReservationIdentifier,WarehouseIdentifier } from '../value-objects';
 
 export interface IInventoryAllocationResult {
   readonly warehouseId: WarehouseIdentifier;

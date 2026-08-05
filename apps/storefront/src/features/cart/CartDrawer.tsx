@@ -5,12 +5,13 @@
 
 'use client';
 
-import React, { useState } from 'react';
+import { Minus, Plus, ShoppingBag, Tag,Trash2, X } from 'lucide-react';
 import Link from 'next/link';
-import { ShoppingBag, X, Trash2, Plus, Minus, Tag } from 'lucide-react';
-import { useStorefront } from '../../providers/storefront-provider';
-import { formatCurrency } from '../../lib/utils';
+import React, { useState } from 'react';
+
 import { CartItem } from '../../lib/commerce-client';
+import { formatCurrency } from '../../lib/utils';
+import { useStorefront } from '../../providers/storefront-provider';
 
 export function CartDrawer() {
   const {

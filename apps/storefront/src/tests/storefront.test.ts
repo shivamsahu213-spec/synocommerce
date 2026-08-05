@@ -3,9 +3,10 @@
  * @module apps/storefront/src/tests/storefront.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
-import { STOREFRONT_PRODUCTS, searchEngine, cartEngine, CartAggregate } from '../lib/commerce-client';
+import test from 'node:test';
+
+import { CartAggregate,cartEngine, searchEngine, STOREFRONT_PRODUCTS } from '../lib/commerce-client';
 import { formatCurrency } from '../lib/utils';
 
 test('Storefront Framework: Data Models & Commerce Engine Binding', async (t) => {

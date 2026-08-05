@@ -3,12 +3,13 @@
  * @module tools/installer/tests/installer.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
-import { SynoStoreInstaller } from '../installer-engine';
-import { AiStoreGeneratorEngine } from '../ai-generator';
-import { PlatformUpdateEngine } from '../update-engine';
+import test from 'node:test';
+
 import { MarketplaceRegistryEngine } from '../../marketplace/marketplace-engine';
+import { AiStoreGeneratorEngine } from '../ai-generator';
+import { SynoStoreInstaller } from '../installer-engine';
+import { PlatformUpdateEngine } from '../update-engine';
 
 test('Installer Platform: Store Provisioning & AI Generator', async (t) => {
   const installer = new SynoStoreInstaller();

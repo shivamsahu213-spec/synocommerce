@@ -3,8 +3,8 @@
  * @module application/validators/validator.interface
  */
 
-import { ValidationResult } from '../results';
 import { ICommand } from '../commands';
+import { ValidationResult } from '../results';
 
 export interface IValidator<T> {
   validate(target: T): Promise<ValidationResult>;

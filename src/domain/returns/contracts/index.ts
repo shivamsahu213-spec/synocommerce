@@ -7,10 +7,10 @@
 import { SKU } from '../..';
 import { OrderIdentifier } from '../../orders/value-objects';
 import {
+  ReturnAuthorization,
   ReturnIdentifier,
   ReturnReason,
   ReturnStatus,
-  ReturnAuthorization,
 } from '../value-objects';
 
 /** Line item within a return request. */

@@ -8,8 +8,8 @@
  */
 
 import { Address } from '../..';
-import { ShippingRate, TrackingEvent, TrackingNumber } from '../value-objects';
 import { IShipmentPackage, IShippingLabel } from '../contracts';
+import { ShippingRate, TrackingEvent, TrackingNumber } from '../value-objects';
 
 /**
  * Vendor-neutral rate calculation port.

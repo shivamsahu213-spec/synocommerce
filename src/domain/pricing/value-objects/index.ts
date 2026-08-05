@@ -1,5 +1,5 @@
-import { Money, DateRange } from '../..';
-import { IBasePrice, ISalePrice, ICompareAtPrice } from '../contracts';
+import { DateRange,Money } from '../..';
+import { IBasePrice, ICompareAtPrice,ISalePrice } from '../contracts';
 
 export class BasePrice implements IBasePrice {
   constructor(public readonly amount: Money) {}

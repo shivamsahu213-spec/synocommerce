@@ -7,16 +7,16 @@
  */
 
 import {
+  ApiKeyService,
   AuthenticationService,
   AuthorizationService,
-  SessionService,
-  ApiKeyService,
-  MfaService,
-  InMemoryUserRepositoryAdapter,
-  InMemoryRoleRepositoryAdapter,
-  InMemorySessionRepositoryAdapter,
   InMemoryApiKeyRepositoryAdapter,
   InMemoryAuditLogRepositoryAdapter,
+  InMemoryRoleRepositoryAdapter,
+  InMemorySessionRepositoryAdapter,
+  InMemoryUserRepositoryAdapter,
+  MfaService,
+  SessionService,
 } from '@/modules/iam';
 
 // Singleton instances for client runtime state

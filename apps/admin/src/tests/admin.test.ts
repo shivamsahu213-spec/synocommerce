@@ -3,9 +3,10 @@
  * @module apps/admin/src/tests/admin.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
-import { INITIAL_PRODUCTS, INITIAL_ORDERS, INITIAL_CUSTOMERS, INITIAL_PLUGINS } from '../lib/data-store';
+import test from 'node:test';
+
+import { INITIAL_CUSTOMERS, INITIAL_ORDERS, INITIAL_PLUGINS,INITIAL_PRODUCTS } from '../lib/data-store';
 import { formatCurrency } from '../lib/utils';
 
 test('Admin Platform Data Store & Utilities', async (t) => {
