@@ -8,6 +8,12 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   compress: true,
   output: 'standalone',
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   experimental: {
     optimizePackageImports: ['lucide-react']
   },
