@@ -106,6 +106,7 @@ export function Button({ children, variant = 'primary', onClick }: ButtonProps) 
 export interface AppLayoutProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   activeTab: 'dashboard' | 'products' | 'orders' | 'customers' | 'inventory' | 'categories' | 'collections' | 'discounts' | 'analytics' | 'low-code' | 'migration' | 'search';
 =======
   activeTab: 'dashboard' | 'products' | 'orders' | 'customers' | 'inventory' | 'categories' | 'analytics' | 'low-code' | 'migration' | 'search';
@@ -113,6 +114,9 @@ export interface AppLayoutProps {
 =======
   activeTab: 'dashboard' | 'products' | 'orders' | 'customers' | 'inventory' | 'categories' | 'collections' | 'analytics' | 'low-code' | 'migration' | 'search';
 >>>>>>> origin/feature/collections-ui
+=======
+  activeTab: 'dashboard' | 'products' | 'orders' | 'customers' | 'inventory' | 'categories' | 'collections' | 'discounts' | 'analytics' | 'low-code' | 'migration' | 'search';
+>>>>>>> origin/feature/discounts-ui
   title: string;
   subtitle?: string | undefined;
   actions?: ReactNode | undefined;
@@ -132,6 +136,7 @@ export function AppLayout({ activeTab, title, actions, children }: AppLayoutProp
             <div style={{ fontWeight: 'bold', fontSize: '1.1rem', color: '#F3F4F6' }}>SynoCommerce</div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div style={{ fontSize: '0.75rem', color: '#9CA3AF' }}>Design System Integration</div>
 =======
             <div style={{ fontSize: '0.75rem', color: '#9CA3AF' }}>Category Studio</div>
@@ -139,10 +144,14 @@ export function AppLayout({ activeTab, title, actions, children }: AppLayoutProp
 =======
             <div style={{ fontSize: '0.75rem', color: '#9CA3AF' }}>Collections Studio</div>
 >>>>>>> origin/feature/collections-ui
+=======
+            <div style={{ fontSize: '0.75rem', color: '#9CA3AF' }}>Promotions Studio</div>
+>>>>>>> origin/feature/discounts-ui
           </div>
         </div>
 
         <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', flex: 1 }}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <a
@@ -214,12 +223,15 @@ export function AppLayout({ activeTab, title, actions, children }: AppLayoutProp
 =======
 =======
 >>>>>>> origin/feature/collections-ui
+=======
+>>>>>>> origin/feature/discounts-ui
           <a href="/dashboard" style={{ padding: '0.75rem 1rem', borderRadius: '6px', color: '#9CA3AF', textDecoration: 'none' }}>
             📊 Executive Dashboard
           </a>
           <a href="/products" style={{ padding: '0.75rem 1rem', borderRadius: '6px', color: '#9CA3AF', textDecoration: 'none' }}>
             📦 Products & Catalog
           </a>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <a
 >>>>>>> origin/feature/categories-ui
@@ -255,6 +267,8 @@ export function AppLayout({ activeTab, title, actions, children }: AppLayoutProp
             🖼️ Storefront Collections
           </a>
 <<<<<<< HEAD
+=======
+>>>>>>> origin/feature/discounts-ui
           <a
             href="/discounts"
             style={{
@@ -268,6 +282,7 @@ export function AppLayout({ activeTab, title, actions, children }: AppLayoutProp
           >
             🏷️ Discounts & Rules
           </a>
+<<<<<<< HEAD
           <a
             href="/analytics"
             style={{
@@ -288,6 +303,10 @@ export function AppLayout({ activeTab, title, actions, children }: AppLayoutProp
           <a href="/orders" style={{ padding: '0.75rem 1rem', borderRadius: '6px', color: '#9CA3AF', textDecoration: 'none' }}>
             🛍️ Orders & Shipments
 >>>>>>> origin/feature/collections-ui
+=======
+          <a href="/orders" style={{ padding: '0.75rem 1rem', borderRadius: '6px', color: '#9CA3AF', textDecoration: 'none' }}>
+            🛍️ Orders & Shipments
+>>>>>>> origin/feature/discounts-ui
           </a>
         </nav>
       </aside>
