@@ -50,6 +50,8 @@
       "@security/*": ["src/modules/security/*"],
       "@devops/*": ["platform/devops/*"],
       "@analytics/*": ["src/modules/analytics/*"],
+      "@business-intelligence/*": ["src/modules/business-intelligence/*"],
+      "@analytics-app/*": ["apps/analytics/src/*"],
       "@extensions/*": ["src/modules/extensions/*"],
       "@data-platform/*": ["src/modules/data-platform/*"],
       "@docs/*": ["apps/docs/src/*"],
