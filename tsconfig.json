@@ -47,6 +47,7 @@
       "@omnichannel/*": ["src/modules/omnichannel/*"],
       "@api-platform/*": ["src/modules/api-platform/*"],
       "@observability/*": ["src/modules/observability/*"],
+      "@security/*": ["src/modules/security/*"],
       "@portal/*": ["apps/portal/src/*"],
       "@starter-fashion/*": ["stores/starter-fashion/*"],
       "@starter-electronics/*": ["stores/starter-electronics/*"],
