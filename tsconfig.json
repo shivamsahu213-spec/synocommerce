@@ -59,7 +59,8 @@
       "@starter-fashion/*": ["stores/starter-fashion/*"],
       "@starter-electronics/*": ["stores/starter-electronics/*"],
       "@kalyan-ayurvedic": ["stores/kalyan-ayurvedic/index.ts"],
-      "@kalyan-ayurvedic/*": ["stores/kalyan-ayurvedic/*"]
+      "@kalyan-ayurvedic/*": ["stores/kalyan-ayurvedic/*"],
+      "@desktop-pos/*": ["apps/desktop-pos/src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
