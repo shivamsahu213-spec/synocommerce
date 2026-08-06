@@ -1,4 +1,4 @@
-import { Identifier, Money, SKU, Slug, SeoMetadata } from '../..';
+import { Identifier, Money, SeoMetadata,SKU, Slug } from '../..';
 
 export type ProductStatus = 'DRAFT' | 'PUBLISHED' | 'ARCHIVED' | 'SCHEDULED';
 export type Visibility = 'PUBLIC' | 'HIDDEN' | 'RESTRICTED';

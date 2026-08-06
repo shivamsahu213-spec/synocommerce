@@ -4,6 +4,8 @@
  */
 
 import crypto from 'node:crypto';
+
+import { ShipmentSecurityEngine } from './shipment-security';
 import {
   CreateShipmentRequest,
   ShipmentResult,
@@ -12,7 +14,6 @@ import {
   ShippingRateResult,
   WebhookShipmentPayload,
 } from './types';
-import { ShipmentSecurityEngine } from './shipment-security';
 
 export class ShippingCarrierProvider {
   private webhookSecrets = new Map<ShippingCarrierType, string>();

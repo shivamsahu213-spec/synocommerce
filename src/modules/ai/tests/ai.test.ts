@@ -3,15 +3,16 @@
  * @module modules/ai/tests/ai.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import test from 'node:test';
+
 import {
+  AiAnalyticsEngine,
+  AiContentGeneratorEngine,
+  AiCopilotEngine,
   AiOrchestratorEngine,
   AiRecommendationEngine,
   SemanticSearchEngine,
-  AiContentGeneratorEngine,
-  AiCopilotEngine,
-  AiAnalyticsEngine,
 } from '../index';
 
 test('Enterprise AI Commerce Platform', async (t) => {

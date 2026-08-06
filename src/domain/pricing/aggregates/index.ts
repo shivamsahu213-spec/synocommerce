@@ -1,4 +1,4 @@
-import { AggregateRoot, Identifier, Currency } from '../..';
+import { AggregateRoot, Currency,Identifier } from '../..';
 import { IPriceBook } from '../contracts';
 
 export class PriceBookAggregate extends AggregateRoot<Identifier> implements IPriceBook {

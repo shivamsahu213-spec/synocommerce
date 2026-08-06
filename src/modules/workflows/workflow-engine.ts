@@ -3,7 +3,7 @@
  * @module modules/workflows/workflow-engine
  */
 
-import { WorkflowDefinition, WorkflowExecutionResult, WorkflowExecutionState, WorkflowTriggerType, WorkflowNode } from './types';
+import { WorkflowDefinition, WorkflowExecutionResult, WorkflowExecutionState, WorkflowNode,WorkflowTriggerType } from './types';
 
 export class WorkflowEngineProcessor {
   private readonly _workflows = new Map<string, WorkflowDefinition>();

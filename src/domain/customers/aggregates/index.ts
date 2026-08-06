@@ -1,7 +1,7 @@
 import { AggregateRoot, Email, PhoneNumber } from '../..';
-import { CustomerIdentifier, CustomerStatus, CustomerType, CustomerProfile, CustomerPreferences, CustomerGroup } from '../value-objects';
 import { ICustomer } from '../contracts';
 import { CustomerSuspendedError } from '../errors';
+import { CustomerGroup,CustomerIdentifier, CustomerPreferences, CustomerProfile, CustomerStatus, CustomerType } from '../value-objects';
 
 export interface CustomerProps {
   email: Email;

@@ -8,8 +8,8 @@
 
 'use client';
 
+import { ChevronLeft, ChevronRight, Download, Eye, Search, SlidersHorizontal } from 'lucide-react';
 import React, { useState } from 'react';
-import { Search, Download, ChevronLeft, ChevronRight, Eye, SlidersHorizontal } from 'lucide-react';
 
 export interface ColumnDef<T> {
   key: keyof T | string;

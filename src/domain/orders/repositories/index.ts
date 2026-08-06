@@ -1,6 +1,6 @@
 import { IBaseRepository } from '../..';
-import { OrderIdentifier, OrderNumber } from '../value-objects';
 import { OrderAggregate } from '../aggregates';
+import { OrderIdentifier, OrderNumber } from '../value-objects';
 
 export interface IOrderRepository extends IBaseRepository<OrderAggregate, OrderIdentifier> {
   findByOrderNumber(orderNumber: OrderNumber): Promise<OrderAggregate | null>;

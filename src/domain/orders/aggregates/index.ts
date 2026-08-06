@@ -1,9 +1,9 @@
 import { AggregateRoot, Currency, Money } from '../..';
-import { OrderIdentifier, OrderNumber, OrderTotals, OrderPayment, OrderShipment, OrderInvoice } from '../value-objects';
 import { IOrder } from '../contracts';
 import { OrderItemEntity } from '../entities';
-import { OrderStatus, OrderPaymentStatus, OrderFulfillmentStatus } from '../types';
 import { InvalidOrderStateTransitionError } from '../errors';
+import { OrderFulfillmentStatus,OrderPaymentStatus, OrderStatus } from '../types';
+import { OrderIdentifier, OrderInvoice,OrderNumber, OrderPayment, OrderShipment, OrderTotals } from '../value-objects';
 
 export class OrderAggregate extends AggregateRoot<OrderIdentifier> implements IOrder {
   private _status: OrderStatus;

@@ -1,7 +1,7 @@
 import { Entity, SKU } from '../..';
-import { InventoryIdentifier, WarehouseIdentifier, StockLevel } from '../value-objects';
 import { IInventoryItem } from '../contracts';
 import { InsufficientStockError } from '../errors';
+import { InventoryIdentifier, StockLevel,WarehouseIdentifier } from '../value-objects';
 
 export class InventoryItemEntity extends Entity<InventoryIdentifier> implements IInventoryItem {
   private _stockLevel: StockLevel;

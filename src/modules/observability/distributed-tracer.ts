@@ -4,6 +4,7 @@
  */
 
 import crypto from 'node:crypto';
+
 import { SpanRecord } from './types';
 
 export class OpenTelemetryTracerEngine {

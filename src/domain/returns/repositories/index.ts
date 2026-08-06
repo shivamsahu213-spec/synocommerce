@@ -6,8 +6,8 @@
 
 import { IBaseRepository } from '../..';
 import { OrderIdentifier } from '../../orders/value-objects';
-import { ReturnIdentifier } from '../value-objects';
 import { ReturnAggregate } from '../aggregates';
+import { ReturnIdentifier } from '../value-objects';
 
 export interface IReturnRepository
   extends IBaseRepository<ReturnAggregate, ReturnIdentifier>

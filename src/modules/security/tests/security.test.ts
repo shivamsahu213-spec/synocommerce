@@ -3,13 +3,14 @@
  * @module modules/security/tests/security.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import test from 'node:test';
+
 import {
-  EncryptionVaultEngine,
   CompliancePrivacyEngine,
-  ThreatZeroTrustEngine,
+  EncryptionVaultEngine,
   SecurityAuditLoggerEngine,
+  ThreatZeroTrustEngine,
 } from '../index';
 
 test('Enterprise Security, Compliance & Governance Platform', async (t) => {

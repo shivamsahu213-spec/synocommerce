@@ -11,22 +11,22 @@ import { AggregateRoot } from '../..';
 import { OrderIdentifier } from '../../orders/value-objects';
 import { IFulfillmentOrder } from '../contracts';
 import {
-  FulfillmentIdentifier,
-  FulfillmentStatus,
-  WarehouseAssignment,
-  AllocationResult,
-} from '../value-objects';
-import {
   AllocationFailedError,
   InvalidFulfillmentStateError,
 } from '../errors';
 import {
+  FulfillmentCompletedEvent,
   FulfillmentStartedEvent,
   ItemsAllocatedEvent,
   ItemsPackedEvent,
   ItemsShippedEvent,
-  FulfillmentCompletedEvent,
 } from '../events';
+import {
+  AllocationResult,
+  FulfillmentIdentifier,
+  FulfillmentStatus,
+  WarehouseAssignment,
+} from '../value-objects';
 
 export class FulfillmentAggregate
   extends AggregateRoot<FulfillmentIdentifier>

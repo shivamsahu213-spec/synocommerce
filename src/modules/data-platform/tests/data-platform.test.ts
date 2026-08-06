@@ -3,18 +3,19 @@
  * @module src/modules/data-platform/tests/data-platform.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import test from 'node:test';
+
 import {
-  EventBusProcessor,
-  EventStoreProcessor,
-  StreamProcessorEngine,
-  SchemaRegistryProcessor,
   CdcEngineProcessor,
   DataLakeProcessor,
-  WarehouseEngineProcessor,
-  EtlEngineProcessor,
   DataPlatformEvent,
+  EtlEngineProcessor,
+  EventBusProcessor,
+  EventStoreProcessor,
+  SchemaRegistryProcessor,
+  StreamProcessorEngine,
+  WarehouseEngineProcessor,
 } from '../index';
 
 test('Enterprise Event Streaming & Data Platform', async (t) => {

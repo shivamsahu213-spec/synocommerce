@@ -3,8 +3,9 @@
  * @module modules/cms/tests/cms.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import test from 'node:test';
+
 import {
   CmsBlockRegistry,
   CmsDocumentEngine,

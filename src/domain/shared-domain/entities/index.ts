@@ -3,8 +3,8 @@
  * @module domain/shared-domain/entities
  */
 
-import { Identifier } from '../value-objects/identifier.vo';
 import { IEntity } from '../contracts';
+import { Identifier } from '../value-objects/identifier.vo';
 
 export abstract class Entity<TId extends Identifier = Identifier> implements IEntity<TId> {
   protected readonly _id: TId;

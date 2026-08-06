@@ -9,13 +9,13 @@
 
 import { AggregateRoot, Percentage } from '../..';
 import { ITaxRate } from '../contracts';
-import { TaxIdentifier } from '../value-objects';
-import { TaxType } from '../types';
 import { TaxRateInactiveError } from '../errors';
 import {
   TaxRateActivatedEvent,
   TaxRateDeactivatedEvent,
 } from '../events';
+import { TaxType } from '../types';
+import { TaxIdentifier } from '../value-objects';
 
 export class TaxRateAggregate extends AggregateRoot<TaxIdentifier> implements ITaxRate {
   private _isActive: boolean;

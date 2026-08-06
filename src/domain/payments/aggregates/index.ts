@@ -10,35 +10,35 @@
 import { AggregateRoot, Money } from '../..';
 import { OrderIdentifier } from '../../orders/value-objects';
 import {
-  IPayment,
-  IPaymentMethod,
-  IPaymentTransaction,
-  IPaymentAttempt,
   IAuthorization,
   ICapture,
-  IVoid,
+  IPayment,
+  IPaymentAttempt,
+  IPaymentMethod,
+  IPaymentTransaction,
   ISettlement,
+  IVoid,
 } from '../contracts';
-import {
-  PaymentIdentifier,
-  PaymentStatus,
-  FraudCheck,
-  PaymentReceipt,
-} from '../value-objects';
 import {
   PaymentAuthorizationFailedError,
   PaymentCaptureFailedError,
   PaymentVoidFailedError,
 } from '../errors';
 import {
-  PaymentInitiatedEvent,
   PaymentAuthorizedEvent,
   PaymentCapturedEvent,
-  PaymentFailedEvent,
-  PaymentVoidedEvent,
   PaymentDisputedEvent,
+  PaymentFailedEvent,
+  PaymentInitiatedEvent,
   PaymentRefundRequestedEvent,
+  PaymentVoidedEvent,
 } from '../events';
+import {
+  FraudCheck,
+  PaymentIdentifier,
+  PaymentReceipt,
+  PaymentStatus,
+} from '../value-objects';
 
 export class PaymentAggregate extends AggregateRoot<PaymentIdentifier> implements IPayment {
   private _status: PaymentStatus;

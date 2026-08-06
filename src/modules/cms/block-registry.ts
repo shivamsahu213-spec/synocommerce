@@ -3,7 +3,7 @@
  * @module modules/cms/block-registry
  */
 
-import { CmsBlockType, CmsBlockInstance } from './types';
+import { CmsBlockInstance,CmsBlockType } from './types';
 
 export interface BlockDefinition {
   type: CmsBlockType;

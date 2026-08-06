@@ -3,5 +3,5 @@
  * @module application/pipelines/behaviors
  */
 
-export * from './validation.behavior';
 export * from './behaviors';
+export * from './validation.behavior';

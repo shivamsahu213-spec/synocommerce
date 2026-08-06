@@ -4,6 +4,7 @@
  */
 
 import crypto from 'node:crypto';
+
 import { ShippingCarrierType } from './types';
 
 export class ShipmentSecurityEngine {

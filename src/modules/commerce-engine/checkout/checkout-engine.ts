@@ -7,10 +7,11 @@
  */
 
 import crypto from 'node:crypto';
+
 import { CartAggregate, CartEngine } from '../cart';
 import { InventoryEngine } from '../inventory';
-import { PaymentEngine } from '../payments';
 import { OrderEngine, OrderRecord, ShippingAddress } from '../orders';
+import { PaymentEngine } from '../payments';
 
 export type CheckoutStep = 'SHIPPING' | 'BILLING' | 'PAYMENT' | 'REVIEW' | 'CONFIRMED';
 

@@ -3,9 +3,9 @@
  * @module src/modules/extensions/plugin-engine
  */
 
-import { InstalledPluginRecord, SynoPackage } from './types';
 import { PluginSigningEngine } from './plugin-signing';
 import { PluginValidatorProcessor } from './plugin-validator';
+import { InstalledPluginRecord, SynoPackage } from './types';
 
 export class PluginEngineProcessor {
   private installedPlugins = new Map<string, InstalledPluginRecord>();

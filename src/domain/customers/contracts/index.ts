@@ -1,5 +1,5 @@
 import { Email, PhoneNumber } from '../..';
-import { CustomerIdentifier, CustomerStatus, CustomerType, CustomerProfile, CustomerPreferences, CustomerGroup } from '../value-objects';
+import { CustomerGroup,CustomerIdentifier, CustomerPreferences, CustomerProfile, CustomerStatus, CustomerType } from '../value-objects';
 
 export interface ICustomer {
   readonly id: CustomerIdentifier;

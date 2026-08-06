@@ -4,26 +4,26 @@
  */
 
 // Sprint 1 Domain Layer
-export * from './shared-domain';
+export * from './brands';
 export * from './catalog';
 export * from './categories';
-export * from './brands';
-export * from './products';
 export * from './pricing';
+export * from './products';
+export * from './shared-domain';
 
 // Sprint 2 Commerce Transaction Domain Layer
-export * from './inventory';
+export * from './addresses';
 export * from './cart';
 export * from './checkout';
-export * from './orders';
 export * from './customers';
-export * from './addresses';
+export * from './inventory';
+export * from './orders';
 
 // Sprint 3 Financial & Fulfillment Domain Layer
-export * from './payments';
-export * from './shipping';
 export * from './fulfillment';
-export * from './tax';
-export * from './returns';
-export * from './refunds';
 export * from './invoicing';
+export * from './payments';
+export * from './refunds';
+export * from './returns';
+export * from './shipping';
+export * from './tax';

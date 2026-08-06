@@ -1,4 +1,4 @@
-import { Entity, Identifier, SKU, Money, Weight, Dimension } from '../..';
+import { Dimension,Entity, Identifier, Money, SKU, Weight } from '../..';
 import { IProductVariant } from '../contracts';
 
 export interface ProductVariantProps {

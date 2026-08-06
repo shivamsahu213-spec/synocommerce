@@ -1,8 +1,9 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import './globals.css';
+
 import { getAppRuntimeConfig } from '@config/runtime.config';
 import { AppProviders } from '@shared/providers/app-providers';
-import './globals.css';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 
 const inter = Inter({
   subsets: ['latin'],

@@ -1,8 +1,8 @@
 import { SKU } from '../..';
-import { InventoryIdentifier, WarehouseIdentifier, ReservationIdentifier } from '../value-objects';
-import { InventoryItemEntity } from '../entities';
 import { WarehouseAggregate } from '../aggregates';
 import { IInventoryReservation } from '../contracts';
+import { InventoryItemEntity } from '../entities';
+import { InventoryIdentifier, ReservationIdentifier,WarehouseIdentifier } from '../value-objects';
 
 export interface IInventoryRepository {
   findBySkuAndWarehouse(sku: SKU, warehouseId: WarehouseIdentifier): Promise<InventoryItemEntity | null>;

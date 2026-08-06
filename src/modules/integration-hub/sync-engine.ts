@@ -3,7 +3,7 @@
  * @module modules/integration-hub/sync-engine
  */
 
-import { SyncJobRecord, DeadLetterRecord, SyncMode, ConflictStrategy } from './types';
+import { ConflictStrategy,DeadLetterRecord, SyncJobRecord, SyncMode } from './types';
 
 export class SyncEngineProcessor {
   private readonly _dlq = new Map<string, DeadLetterRecord>();
