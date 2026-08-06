@@ -1,4 +1,4 @@
-import { Identifier, Slug, SKU, Money, Weight, Dimension, SeoMetadata } from '../..';
+import { Dimension, Identifier, Money, SeoMetadata,SKU, Slug, Weight } from '../..';
 import { ProductPublicationState, ProductType } from '../types';
 
 export interface IProductVariant {

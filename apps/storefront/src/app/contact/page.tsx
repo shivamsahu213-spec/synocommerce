@@ -1,6 +1,6 @@
+import { KALYAN_CONTACT_CMS,KALYAN_STORE_CONFIG } from '@kalyan-ayurvedic';
+import { Clock, Mail, MapPin, MessageSquare,Phone } from 'lucide-react';
 import React from 'react';
-import { KALYAN_STORE_CONFIG, KALYAN_CONTACT_CMS } from '@kalyan-ayurvedic';
-import { MapPin, Phone, Mail, Clock, MessageSquare } from 'lucide-react';
 
 export default function ContactPage() {
   return (

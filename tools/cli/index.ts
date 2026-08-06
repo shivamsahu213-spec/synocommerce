@@ -6,8 +6,8 @@
 import { SynoCliHandler } from './commands/cli-commands';
 
 export * from './commands/cli-commands';
-export * from './generators/generator-engine';
 export * from './doctor/doctor';
+export * from './generators/generator-engine';
 export * from './packaging/packager';
 
 export function runCli(args: string[] = process.argv.slice(2)): string {

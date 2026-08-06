@@ -1,5 +1,5 @@
+import { KALYAN_ABOUT_CMS,KALYAN_STORE_CONFIG } from '@kalyan-ayurvedic';
 import React from 'react';
-import { KALYAN_STORE_CONFIG, KALYAN_ABOUT_CMS } from '@kalyan-ayurvedic';
 
 export const metadata = {
   title: `Our Heritage | ${KALYAN_STORE_CONFIG.name}`,

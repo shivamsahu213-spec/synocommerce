@@ -5,8 +5,8 @@
 
 'use client';
 
+import { Bell, Check,DollarSign, Globe, Settings, Shield, Zap } from 'lucide-react';
 import React, { useState } from 'react';
-import { Settings, Globe, DollarSign, Shield, Zap, Bell, Check } from 'lucide-react';
 
 export function SettingsView() {
   const [storeName, setStoreName] = useState('SynoCommerce Storefront US');

@@ -3,8 +3,8 @@
  * @module modules/iam/application/services/authorization.service
  */
 
+import { IRoleRepository,IUserRepository } from '../../domain/repositories';
 import { UserIdentifier } from '../../domain/value-objects';
-import { IUserRepository, IRoleRepository } from '../../domain/repositories';
 
 export class AuthorizationService {
   private readonly _userRepo: IUserRepository;

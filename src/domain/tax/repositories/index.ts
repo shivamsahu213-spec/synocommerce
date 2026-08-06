@@ -5,9 +5,9 @@
  */
 
 import { IBaseRepository } from '../..';
-import { TaxIdentifier } from '../value-objects';
 import { TaxRateAggregate } from '../aggregates';
 import { ITaxJurisdiction } from '../contracts';
+import { TaxIdentifier } from '../value-objects';
 
 export interface ITaxRepository extends IBaseRepository<TaxRateAggregate, TaxIdentifier> {
   findJurisdiction(

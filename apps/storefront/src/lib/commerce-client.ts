@@ -4,32 +4,31 @@
  */
 
 import {
+  CartAggregate,
+  CartEngine,
+  type CartItem,
+  type CartTotals,
+  CheckoutEngine,
+  InventoryEngine,
+  OrderEngine,
+  type OrderRecord,
+  PaymentEngine,
   PricingEngine,
   PromotionEngine,
-  InventoryEngine,
-  TaxEngine,
-  CartEngine,
-  CartAggregate,
-  PaymentEngine,
-  OrderEngine,
-  CheckoutEngine,
-  SearchEngine,
   RecommendationEngine,
+  SearchEngine,
   SearchProductDoc,
-  type CartTotals,
-  type OrderRecord,
-  type CartItem,
+  TaxEngine,
 } from '@/modules/commerce-engine';
-
-export { CartAggregate };
-export type { CartTotals, OrderRecord, CartItem, SearchProductDoc };
-
 import {
   AuthenticationService,
-  InMemoryUserRepositoryAdapter,
-  InMemorySessionRepositoryAdapter,
   InMemoryAuditLogRepositoryAdapter,
+  InMemorySessionRepositoryAdapter,
+  InMemoryUserRepositoryAdapter,
 } from '@/modules/iam';
+
+export { CartAggregate };
+export type { CartItem, CartTotals, OrderRecord, SearchProductDoc };
 
 // Singleton Engines
 export const pricingEngine = new PricingEngine();

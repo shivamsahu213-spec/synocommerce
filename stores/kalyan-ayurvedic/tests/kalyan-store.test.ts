@@ -3,17 +3,18 @@
  * @module stores/kalyan-ayurvedic/tests/kalyan-store.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import test from 'node:test';
+
 import {
-  KALYAN_STORE_CONFIG,
-  KALYAN_THEME_CONFIG,
   KALYAN_BRAND_CONFIG,
-  KALYAN_PRODUCTS,
   KALYAN_CATEGORIES,
   KALYAN_HEALTH_GOALS,
   KALYAN_HOMEPAGE_CMS,
+  KALYAN_PRODUCTS,
   KALYAN_SEO_CONFIG,
+  KALYAN_STORE_CONFIG,
+  KALYAN_THEME_CONFIG,
 } from '../index';
 
 test('Kalyan Ayurvedic Store Configuration Integrity', async (t) => {

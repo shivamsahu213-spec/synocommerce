@@ -5,12 +5,13 @@
 
 'use client';
 
-import React, { useState } from 'react';
+import { Heart, Menu, Search, ShoppingBag, Sparkles, User, X } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { ShoppingBag, Heart, Search, User, Sparkles, Menu, X } from 'lucide-react';
-import { useStorefront } from '../providers/storefront-provider';
+import React, { useState } from 'react';
+
 import { CartItem } from '../lib/commerce-client';
+import { useStorefront } from '../providers/storefront-provider';
 
 export function Navbar() {
   const router = useRouter();

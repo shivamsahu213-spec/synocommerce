@@ -3,7 +3,7 @@
  * @module modules/iam
  */
 
-export * from './domain';
 export * from './application';
-export * from './infrastructure';
 export * from './delivery';
+export * from './domain';
+export * from './infrastructure';

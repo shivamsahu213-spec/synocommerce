@@ -3,23 +3,24 @@
  * @module modules/iam/tests/iam.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import test from 'node:test';
+
+import { UserIdentifier } from '../domain/value-objects';
 import {
+  ApiKeyService,
   AuthenticationService,
   AuthorizationService,
-  MfaService,
-  SessionService,
-  ApiKeyService,
-  InMemoryUserRepositoryAdapter,
-  InMemoryRoleRepositoryAdapter,
-  InMemorySessionRepositoryAdapter,
+  IamController,
   InMemoryApiKeyRepositoryAdapter,
   InMemoryAuditLogRepositoryAdapter,
-  IamController,
+  InMemoryRoleRepositoryAdapter,
+  InMemorySessionRepositoryAdapter,
+  InMemoryUserRepositoryAdapter,
+  MfaService,
+  SessionService,
   TotpUtil,
 } from '../index';
-import { UserIdentifier } from '../domain/value-objects';
 
 test('IAM Authentication & User Lifecycle', async (t) => {
   const userRepo = new InMemoryUserRepositoryAdapter();

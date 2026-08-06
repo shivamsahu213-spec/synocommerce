@@ -3,7 +3,7 @@
  * @module modules/ai/ai-orchestrator
  */
 
-import { AiProviderType, AiPromptRequest, AiPromptResponse } from './types';
+import { AiPromptRequest, AiPromptResponse,AiProviderType } from './types';
 
 export class AiOrchestratorEngine {
   private _totalTokensUsed = 0;

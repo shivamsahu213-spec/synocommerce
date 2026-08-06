@@ -1,4 +1,4 @@
-import { Money, Currency } from '../..';
+import { Currency,Money } from '../..';
 
 export interface IPricingCalculationContext {
   readonly productId: string;

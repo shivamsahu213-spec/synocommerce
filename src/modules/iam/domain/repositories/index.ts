@@ -3,8 +3,8 @@
  * @module modules/iam/domain/repositories
  */
 
-import { UserAggregate, RoleEntity, SessionEntity, ApiKeyEntity, AuditLogEntity } from '../entities';
-import { UserIdentifier, Email, RoleIdentifier, SessionIdentifier, ApiKeyIdentifier } from '../value-objects';
+import { ApiKeyEntity, AuditLogEntity,RoleEntity, SessionEntity, UserAggregate } from '../entities';
+import { ApiKeyIdentifier,Email, RoleIdentifier, SessionIdentifier, UserIdentifier } from '../value-objects';
 
 export interface IUserRepository {
   findById(id: UserIdentifier): Promise<UserAggregate | null>;

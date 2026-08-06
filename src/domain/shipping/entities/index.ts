@@ -6,7 +6,7 @@
  * @module domain/shipping/entities
  */
 
-import { Entity, Identifier, SKU, Weight, Dimension, DomainInvariantError } from '../..';
+import { Dimension, DomainInvariantError,Entity, Identifier, SKU, Weight } from '../..';
 import { IShipmentItem, IShipmentPackage } from '../contracts';
 
 export class ShipmentItemEntity extends Entity<Identifier> implements IShipmentItem {

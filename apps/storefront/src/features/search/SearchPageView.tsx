@@ -5,12 +5,13 @@
 
 'use client';
 
-import React from 'react';
+import { Frown,Search, ShoppingBag } from 'lucide-react';
 import Link from 'next/link';
-import { ShoppingBag, Search, Frown } from 'lucide-react';
+import React from 'react';
+
 import { searchEngine } from '../../lib/commerce-client';
-import { useStorefront } from '../../providers/storefront-provider';
 import { formatCurrency } from '../../lib/utils';
+import { useStorefront } from '../../providers/storefront-provider';
 
 export function SearchPageView({ query }: { query: string }) {
   const { addToCart, currency } = useStorefront();

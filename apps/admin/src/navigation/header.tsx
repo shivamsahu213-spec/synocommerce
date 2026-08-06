@@ -5,8 +5,9 @@
 
 'use client';
 
+import { Bell, LogOut, Moon, Search, Sun, User } from 'lucide-react';
 import React from 'react';
-import { Search, Bell, Sun, Moon, LogOut, User } from 'lucide-react';
+
 import { useAuth } from '../providers/auth-provider';
 import { useTheme } from '../providers/theme-provider';
 

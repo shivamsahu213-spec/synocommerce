@@ -1,4 +1,4 @@
-import { Identifier, Slug, SeoMetadata } from '../..';
+import { Identifier, SeoMetadata,Slug } from '../..';
 
 export interface IBrand {
   readonly id: Identifier;

@@ -8,8 +8,8 @@
  */
 
 import { OrderIdentifier } from '../../orders/value-objects';
-import { AllocationResult, WarehouseAssignment } from '../value-objects';
 import { FulfillmentAggregate } from '../aggregates';
+import { AllocationResult, WarehouseAssignment } from '../value-objects';
 
 /** Orchestrates end-to-end fulfillment for an order. */
 export interface IFulfillmentEngine {

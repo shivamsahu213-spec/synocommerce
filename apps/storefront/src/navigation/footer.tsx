@@ -3,9 +3,9 @@
  * @module apps/storefront/src/navigation/footer
  */
 
-import React from 'react';
-import Link from 'next/link';
 import { Sparkles } from 'lucide-react';
+import Link from 'next/link';
+import React from 'react';
 
 export function Footer() {
   return (

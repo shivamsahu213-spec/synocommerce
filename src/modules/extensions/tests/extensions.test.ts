@@ -3,21 +3,22 @@
  * @module src/modules/extensions/tests/extensions.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import test from 'node:test';
+
 import {
-  PluginSigningEngine,
-  PluginValidatorProcessor,
-  SandboxEngineProcessor,
-  PermissionEngineProcessor,
-  PluginEngineProcessor,
-  ExtensionSdk,
-  ThemeEngineProcessor,
-  MarketplaceEngineProcessor,
-  PublisherPortalProcessor,
   BillingEngineProcessor,
   ExtensionAnalyticsProcessor,
+  ExtensionSdk,
+  MarketplaceEngineProcessor,
+  PermissionEngineProcessor,
+  PluginEngineProcessor,
+  PluginSigningEngine,
+  PluginValidatorProcessor,
+  PublisherPortalProcessor,
+  SandboxEngineProcessor,
   SynoPackage,
+  ThemeEngineProcessor,
 } from '../index';
 
 test('Enterprise Marketplace & Extension Ecosystem Platform', async (t) => {

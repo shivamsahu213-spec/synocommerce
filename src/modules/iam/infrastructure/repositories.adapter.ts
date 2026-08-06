@@ -4,21 +4,21 @@
  */
 
 import {
-  UserAggregate,
-  RoleEntity,
-  SessionEntity,
   ApiKeyEntity,
+  ApiKeyIdentifier,
   AuditLogEntity,
-  IUserRepository,
-  IRoleRepository,
-  ISessionRepository,
+  Email,
   IApiKeyRepository,
   IAuditLogRepository,
-  UserIdentifier,
-  Email,
+  IRoleRepository,
+  ISessionRepository,
+  IUserRepository,
+  RoleEntity,
   RoleIdentifier,
+  SessionEntity,
   SessionIdentifier,
-  ApiKeyIdentifier,
+  UserAggregate,
+  UserIdentifier,
 } from '../domain';
 
 export class InMemoryUserRepositoryAdapter implements IUserRepository {

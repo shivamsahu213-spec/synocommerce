@@ -3,7 +3,7 @@
  * @module platform/devops/devops-engine
  */
 
-import { DevOpsPipelineRecord, QualityGateResult, ReleaseType, DeploymentStrategy } from './types';
+import { DeploymentStrategy,DevOpsPipelineRecord, QualityGateResult, ReleaseType } from './types';
 
 export class DevOpsEngineProcessor {
   private readonly _pipelines = new Map<string, DevOpsPipelineRecord>();

@@ -3,7 +3,7 @@
  * @module modules/iam/domain/entities/user.aggregate
  */
 
-import { UserIdentifier, Email, HashedPassword, UserStatus } from '../value-objects';
+import { Email, HashedPassword, UserIdentifier, UserStatus } from '../value-objects';
 
 export interface UserProfile {
   firstName: string;

@@ -3,7 +3,7 @@
  * @module modules/omnichannel/omnichannel-fulfillment
  */
 
-import { OmnichannelFulfillmentRecord, OmnichannelFulfillmentMode } from './types';
+import { OmnichannelFulfillmentMode,OmnichannelFulfillmentRecord } from './types';
 
 export class OmnichannelFulfillmentEngine {
   public createBopisFulfillment(orderId: string, pickupStoreId: string): OmnichannelFulfillmentRecord {
