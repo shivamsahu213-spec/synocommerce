@@ -1,1 +1,1 @@
-export { default, metadata } from '@storefront/app/page';
+export { default } from '@storefront/app/page';
