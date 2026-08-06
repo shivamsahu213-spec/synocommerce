@@ -1,5 +1,5 @@
-export * from '@platform/application';
 export * from '@platform/analytics';
+export * from '@platform/application';
 export * from '@platform/bootstrap';
 export * from '@platform/cache';
 export * from '@platform/configuration';

@@ -3,13 +3,14 @@
  * @module modules/b2b/tests/b2b.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import test from 'node:test';
+
 import {
   B2bCompanyEngine,
   B2bContractPricingEngine,
-  RfqNegotiationEngine,
   PurchaseOrderEngine,
+  RfqNegotiationEngine,
 } from '../index';
 
 test('Enterprise B2B Commerce Platform', async (t) => {

@@ -1,7 +1,7 @@
 import { AggregateRoot } from '../..';
-import { WarehouseIdentifier } from '../value-objects';
 import { IWarehouse } from '../contracts';
 import { WarehouseType } from '../types';
+import { WarehouseIdentifier } from '../value-objects';
 
 export class WarehouseAggregate extends AggregateRoot<WarehouseIdentifier> implements IWarehouse {
   private _code: string;

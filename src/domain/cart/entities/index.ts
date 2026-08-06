@@ -1,5 +1,4 @@
-import { Entity, SKU, Money } from '../..';
-import { Identifier } from '../..';
+import { Entity, Identifier,Money,SKU  } from '../..';
 import { ICartItem } from '../contracts';
 
 export class CartItemEntity extends Entity<Identifier> implements ICartItem {

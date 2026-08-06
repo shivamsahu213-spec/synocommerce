@@ -6,7 +6,8 @@
 'use client';
 
 import React, { createContext, useContext, useState } from 'react';
-import { CartAggregate, CartTotals, searchEngine, cartEngine } from '../lib/commerce-client';
+
+import { CartAggregate, cartEngine,CartTotals, searchEngine } from '../lib/commerce-client';
 
 export interface StorefrontContextType {
   cart: CartAggregate;

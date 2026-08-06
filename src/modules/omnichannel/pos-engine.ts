@@ -3,7 +3,7 @@
  * @module modules/omnichannel/pos-engine
  */
 
-import { PosRegisterRecord, PosOfflineOrder } from './types';
+import { PosOfflineOrder,PosRegisterRecord } from './types';
 
 export class PosRegisterEngine {
   private readonly _registers = new Map<string, PosRegisterRecord>();

@@ -1,4 +1,4 @@
-import { Identifier, Address, Money } from '../..';
+import { Address, Identifier, Money } from '../..';
 
 export class CheckoutSessionIdentifier extends Identifier {}
 

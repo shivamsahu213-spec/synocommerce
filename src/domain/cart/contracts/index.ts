@@ -1,6 +1,6 @@
-import { Currency, SKU, Money } from '../..';
-import { CartIdentifier, AppliedDiscount, CartTotals } from '../value-objects';
+import { Currency, Money,SKU } from '../..';
 import { CartState, CartType } from '../types';
+import { AppliedDiscount, CartIdentifier, CartTotals } from '../value-objects';
 
 export interface ICartItem {
   readonly itemId: string;

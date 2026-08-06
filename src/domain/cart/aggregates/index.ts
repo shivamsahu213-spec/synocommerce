@@ -1,8 +1,8 @@
 import { AggregateRoot, Currency, Money } from '../..';
-import { CartIdentifier, AppliedDiscount, CartTotals } from '../value-objects';
 import { ICart } from '../contracts';
 import { CartItemEntity } from '../entities';
 import { CartState, CartType } from '../types';
+import { AppliedDiscount, CartIdentifier, CartTotals } from '../value-objects';
 
 export class CartAggregate extends AggregateRoot<CartIdentifier> implements ICart {
   private _currency: Currency;

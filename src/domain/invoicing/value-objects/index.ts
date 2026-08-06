@@ -4,7 +4,7 @@
  * @module domain/invoicing/value-objects
  */
 
-import { Identifier, Money, InvalidValueObjectError } from '../..';
+import { Identifier, InvalidValueObjectError,Money } from '../..';
 
 /** Strongly-typed identity for InvoiceAggregate. */
 export class InvoiceIdentifier extends Identifier {}

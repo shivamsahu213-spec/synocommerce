@@ -6,9 +6,9 @@
 
 import { IBaseRepository } from '../..';
 import { OrderIdentifier } from '../../orders/value-objects';
-import { ShipmentIdentifier, TrackingNumber } from '../value-objects';
 import { ShipmentAggregate } from '../aggregates';
 import { IShippingZone } from '../contracts';
+import { ShipmentIdentifier, TrackingNumber } from '../value-objects';
 
 export interface IShipmentRepository extends IBaseRepository<ShipmentAggregate, ShipmentIdentifier> {
   findByOrderId(orderId: OrderIdentifier): Promise<readonly ShipmentAggregate[]>;

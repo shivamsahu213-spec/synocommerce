@@ -5,11 +5,12 @@
 
 'use client';
 
+import { CheckCircle2, Heart, RotateCcw,ShieldCheck, ShoppingBag, Truck } from 'lucide-react';
 import React, { useState } from 'react';
-import { ShoppingBag, Heart, ShieldCheck, CheckCircle2, Truck, RotateCcw } from 'lucide-react';
-import { STOREFRONT_PRODUCTS, recommendationEngine } from '../../lib/commerce-client';
-import { useStorefront } from '../../providers/storefront-provider';
+
+import { recommendationEngine,STOREFRONT_PRODUCTS } from '../../lib/commerce-client';
 import { formatCurrency } from '../../lib/utils';
+import { useStorefront } from '../../providers/storefront-provider';
 
 export function ProductDetailPageView({ productId }: { productId: string }) {
   const { addToCart, toggleWishlist, wishlist, currency } = useStorefront();

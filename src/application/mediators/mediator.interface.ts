@@ -7,9 +7,9 @@
  */
 
 import { ICommand } from '../commands';
+import { IIntegrationEvent } from '../events';
 import { IQuery } from '../queries';
 import { Result } from '../results';
-import { IIntegrationEvent } from '../events';
 
 export interface INotificationHandler<TNotification extends IIntegrationEvent> {
   handle(notification: TNotification): Promise<void>;

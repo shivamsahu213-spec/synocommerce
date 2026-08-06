@@ -3,8 +3,8 @@
  * @module modules/omnichannel
  */
 
-export * from './types';
+export * from './loyalty-engine';
+export * from './omnichannel-fulfillment';
 export * from './pos-engine';
 export * from './store-inventory-sync';
-export * from './omnichannel-fulfillment';
-export * from './loyalty-engine';
+export * from './types';

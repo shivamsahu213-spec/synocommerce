@@ -3,12 +3,13 @@
  * @module modules/workflows/tests/workflows.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import test from 'node:test';
+
 import {
-  WorkflowEngineProcessor,
-  RulesEngineEvaluator,
   ApprovalQueueManager,
+  RulesEngineEvaluator,
+  WorkflowEngineProcessor,
 } from '../index';
 
 test('Enterprise Workflow & Automation Platform', async (t) => {

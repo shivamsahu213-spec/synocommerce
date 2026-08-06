@@ -13,22 +13,22 @@ import { PaymentIdentifier } from '../../payments/value-objects';
 import { ReturnIdentifier } from '../../returns/value-objects';
 import { IRefund, IRefundLine } from '../contracts';
 import {
-  RefundIdentifier,
-  RefundReason,
-  RefundStatus,
-} from '../value-objects';
-import {
   RefundApprovalFailedError,
   RefundProcessFailedError,
   RefundRejectionFailedError,
 } from '../errors';
 import {
-  RefundCreatedEvent,
   RefundApprovedEvent,
+  RefundCreatedEvent,
+  RefundFailedEvent,
   RefundProcessedEvent,
   RefundRejectedEvent,
-  RefundFailedEvent,
 } from '../events';
+import {
+  RefundIdentifier,
+  RefundReason,
+  RefundStatus,
+} from '../value-objects';
 
 export class RefundAggregate
   extends AggregateRoot<RefundIdentifier>

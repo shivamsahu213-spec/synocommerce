@@ -1,4 +1,4 @@
-import { Entity, Identifier, SKU, Money } from '../..';
+import { Entity, Identifier, Money,SKU } from '../..';
 import { IOrderItem } from '../contracts';
 
 export class OrderItemEntity extends Entity<Identifier> implements IOrderItem {

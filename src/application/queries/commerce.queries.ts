@@ -3,20 +3,20 @@
  * @module application/queries/commerce.queries
  */
 
-import { IQuery } from './query.interface';
-import { QueryOptions } from '../types';
 import {
-  ProductDTO,
-  CategoryDTO,
   CartDTO,
+  CategoryDTO,
   CheckoutSessionDTO,
-  OrderDTO,
   CustomerDTO,
-  ShipmentDTO,
   InvoiceDTO,
+  OrderDTO,
   PaymentDTO,
+  ProductDTO,
   SearchProductsInput,
+  ShipmentDTO,
 } from '../dto';
+import { QueryOptions } from '../types';
+import { IQuery } from './query.interface';
 
 export class GetProductQuery implements IQuery<ProductDTO | undefined> {
   public readonly queryName = 'GetProductQuery';

@@ -1,7 +1,7 @@
 import { CompositeSpecification } from '../..';
-import { InventoryItemEntity } from '../entities';
 import { WarehouseAggregate } from '../aggregates';
 import { IInventoryReservation } from '../contracts';
+import { InventoryItemEntity } from '../entities';
 
 export class InventoryAvailableSpecification extends CompositeSpecification<InventoryItemEntity> {
   constructor(private readonly requiredQuantity: number) {

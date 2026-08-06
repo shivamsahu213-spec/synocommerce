@@ -1,6 +1,6 @@
-import React from 'react';
 import { KALYAN_BLOG_POSTS } from '@kalyan-ayurvedic';
 import { Clock, User } from 'lucide-react';
+import React from 'react';
 
 export default function BlogPage() {
   return (

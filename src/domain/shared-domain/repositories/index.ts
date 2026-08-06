@@ -3,9 +3,9 @@
  * @module domain/shared-domain/repositories
  */
 
-import { Identifier } from '../value-objects/identifier.vo';
 import { IAggregateRoot } from '../contracts';
 import { PaginatedResult, PaginationParams } from '../types';
+import { Identifier } from '../value-objects/identifier.vo';
 
 export interface IBaseRepository<TAggregate extends IAggregateRoot<TId>, TId extends Identifier = Identifier> {
   findById(id: TId): Promise<TAggregate | null>;

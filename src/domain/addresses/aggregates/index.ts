@@ -1,6 +1,6 @@
-import { AggregateRoot, Address } from '../..';
-import { AddressIdentifier, AddressRole, GeoLocation } from '../value-objects';
+import { Address,AggregateRoot } from '../..';
 import { IAddress } from '../contracts';
+import { AddressIdentifier, AddressRole, GeoLocation } from '../value-objects';
 
 export class AddressAggregate extends AggregateRoot<AddressIdentifier> implements IAddress {
   private _role: AddressRole;

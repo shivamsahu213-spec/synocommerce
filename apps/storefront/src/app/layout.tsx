@@ -3,12 +3,14 @@
  * @module apps/storefront/src/app/layout
  */
 
-import React from 'react';
 import './globals.css';
-import { StorefrontProvider } from '../providers/storefront-provider';
-import { Navbar } from '../navigation/navbar';
-import { Footer } from '../navigation/footer';
+
+import React from 'react';
+
 import { CartDrawer } from '../features/cart/CartDrawer';
+import { Footer } from '../navigation/footer';
+import { Navbar } from '../navigation/navbar';
+import { StorefrontProvider } from '../providers/storefront-provider';
 
 export const metadata = {
   title: 'SynoStore - Headless Enterprise Storefront',

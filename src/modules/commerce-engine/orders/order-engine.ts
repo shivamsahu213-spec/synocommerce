@@ -7,6 +7,7 @@
  */
 
 import crypto from 'node:crypto';
+
 import { CartItem, CartTotals } from '../cart';
 
 export type OrderStatus = 'PENDING' | 'PAID' | 'PROCESSING' | 'SHIPPED' | 'DELIVERED' | 'CANCELLED';

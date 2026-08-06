@@ -1,12 +1,12 @@
+import { CheckoutStatus } from '../types';
 import {
+  BillingSelection,
   CheckoutSessionIdentifier,
   CheckoutStep,
-  ShippingSelection,
-  BillingSelection,
-  PaymentSelection,
   CheckoutTaxEstimate,
+  PaymentSelection,
+  ShippingSelection,
 } from '../value-objects';
-import { CheckoutStatus } from '../types';
 
 export interface ICheckoutSession {
   readonly id: CheckoutSessionIdentifier;

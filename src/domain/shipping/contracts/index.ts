@@ -7,17 +7,17 @@
  * @module domain/shipping/contracts
  */
 
-import { Address, SKU, Weight, Dimension } from '../..';
+import { Address, Dimension,SKU, Weight } from '../..';
 import { OrderIdentifier } from '../../orders/value-objects';
+import { ShipmentStatus } from '../types';
 import {
-  ShipmentIdentifier,
   CarrierIdentifier,
   LabelIdentifier,
-  TrackingNumber,
-  TrackingEvent,
+  ShipmentIdentifier,
   ShippingRate,
+  TrackingEvent,
+  TrackingNumber,
 } from '../value-objects';
-import { ShipmentStatus } from '../types';
 
 /** Line item packed into a shipment package. */
 export interface IShipmentItem {

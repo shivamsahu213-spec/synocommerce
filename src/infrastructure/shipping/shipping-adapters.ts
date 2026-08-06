@@ -6,8 +6,8 @@
  * @module infrastructure/shipping/shipping-adapters
  */
 
-import { IShippingPort } from '../../application/ports';
 import { CreateShipmentInput, ShipmentDTO } from '../../application/dto';
+import { IShippingPort } from '../../application/ports';
 import { Result } from '../../application/results';
 
 export abstract class BaseShippingAdapter implements IShippingPort {
