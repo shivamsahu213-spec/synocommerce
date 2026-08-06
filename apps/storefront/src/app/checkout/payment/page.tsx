@@ -1,17 +1,17 @@
 'use client';
 
-import { AddressSelector } from '@storefront/components/storefront/cart-checkout/AddressSelector';
 import { Breadcrumb } from '@storefront/components/storefront/cart-checkout/Breadcrumb';
 import { CheckoutStepper } from '@storefront/components/storefront/cart-checkout/CheckoutStepper';
 import { OrderSummary } from '@storefront/components/storefront/cart-checkout/OrderSummary';
+import { PaymentMethodCard, PaymentType } from '@storefront/components/storefront/cart-checkout/PaymentMethodCard';
 import { Footer } from '@storefront/components/storefront/Footer';
 import { Header } from '@storefront/components/storefront/Header';
-import { ArrowRight, MapPin } from 'lucide-react';
+import { ArrowRight, CreditCard } from 'lucide-react';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-export default function CheckoutAddressPage() {
-  const [selectedAddressId, setSelectedAddressId] = useState('a1');
+export default function CheckoutPaymentPage() {
+  const [selectedPaymentType, setSelectedPaymentType] = useState<PaymentType>('card');
 
   const sampleItems = [
     {
@@ -40,43 +40,49 @@ export default function CheckoutAddressPage() {
         <Breadcrumb
           items={[
             { label: 'Shopping Bag', href: '/cart' },
-            { label: 'Checkout • Shipping Address', href: '/checkout' },
+            { label: 'Shipping Method', href: '/checkout/shipping' },
+            { label: 'Payment Method', href: '/checkout/payment' },
           ]}
         />
 
-        <CheckoutStepper currentStep="address" />
+        <CheckoutStepper currentStep="payment" />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Main Form Content */}
           <div className="lg:col-span-7 space-y-6">
             <div className="space-y-1">
               <div className="flex items-center gap-2 text-xs font-bold text-indigo-400 uppercase tracking-wider">
-                <MapPin className="w-4 h-4 text-emerald-400" />
-                <span>Step 1 of 4</span>
+                <CreditCard className="w-4 h-4 text-amber-400" />
+                <span>Step 3 of 4</span>
               </div>
-              <h2 className="font-serif text-3xl font-bold text-white">Select Shipping Address</h2>
+              <h2 className="font-serif text-3xl font-bold text-white">Select Payment Method</h2>
               <p className="text-xs text-slate-400">
-                Choose a saved delivery address or enter a new shipping location for your order.
+                Choose your preferred payment gateway. All transactions are PCI-DSS Level 1 compliant.
               </p>
             </div>
 
-            <AddressSelector
-              selectedAddressId={selectedAddressId}
-              onSelectAddress={setSelectedAddressId}
+            <PaymentMethodCard
+              selectedType={selectedPaymentType}
+              onSelectType={setSelectedPaymentType}
             />
 
-            <div className="pt-4 flex justify-end">
+            <div className="pt-4 flex justify-between gap-4">
               <Link
                 href="/checkout/shipping"
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all shadow-xl shadow-amber-500/20 flex items-center justify-center gap-2"
+                className="px-6 py-3.5 rounded-full bg-slate-900 border border-slate-700 hover:border-slate-600 text-slate-300 text-xs font-bold transition-all"
               >
-                <span>Continue to Shipping Method</span>
+                Back to Shipping
+              </Link>
+
+              <Link
+                href="/checkout/review"
+                className="px-8 py-4 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all shadow-xl shadow-amber-500/20 flex items-center gap-2"
+              >
+                <span>Continue to Order Review</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
 
-          {/* Sticky Right Sidebar */}
           <div className="lg:col-span-5 sticky top-24">
             <OrderSummary items={sampleItems} shippingFee={0} discountAmount={0} taxAmount={31.12} />
           </div>
