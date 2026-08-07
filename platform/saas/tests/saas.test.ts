@@ -3,13 +3,14 @@
  * @module platform/saas/tests/saas.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import test from 'node:test';
+
 import {
   SaaSControlPlaneEngine,
-  SaasSubscriptionMeteringEngine,
   SaaSDeploymentWizardEngine,
   SaasDomainManagerEngine,
+  SaasSubscriptionMeteringEngine,
 } from '../index';
 
 test('Enterprise SaaS Platform: Control Plane & Multi-Tenancy', async (t) => {

@@ -1,4 +1,4 @@
-import { AggregateRoot, Identifier, Slug, SeoMetadata } from '../..';
+import { AggregateRoot, Identifier, SeoMetadata,Slug } from '../..';
 import { ICategory } from '../contracts';
 import { InvalidCategoryParentError } from '../errors';
 

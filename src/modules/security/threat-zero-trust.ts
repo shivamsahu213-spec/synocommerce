@@ -3,7 +3,7 @@
  * @module modules/security/threat-zero-trust
  */
 
-import { ThreatRiskResult, ThreatEventType } from './types';
+import { ThreatEventType,ThreatRiskResult } from './types';
 
 export class ThreatZeroTrustEngine {
   public evaluateAccessRisk(loginIp: string, userAgent: string, failedAttemptsCount: number, geoCountry: string): ThreatRiskResult {

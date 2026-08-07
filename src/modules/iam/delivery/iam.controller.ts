@@ -7,7 +7,7 @@
  */
 
 import { DeliveryRequest, DeliveryResponse } from '../../../delivery';
-import { AuthenticationService, AuthorizationService, MfaService, SessionService, ApiKeyService } from '../application';
+import { ApiKeyService,AuthenticationService, AuthorizationService, MfaService, SessionService } from '../application';
 
 export class IamController {
   private readonly _authService: AuthenticationService;

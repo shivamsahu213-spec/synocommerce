@@ -3,15 +3,16 @@
  * @module modules/ai/tests/ai.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import test from 'node:test';
+
 import {
+  AiAnalyticsEngine,
+  AiContentGeneratorEngine,
+  AiCopilotEngine,
   AiOrchestratorEngine,
   AiRecommendationEngine,
   SemanticSearchEngine,
-  AiContentGeneratorEngine,
-  AiCopilotEngine,
-  AiAnalyticsEngine,
 } from '../index';
 
 test('Enterprise AI Commerce Platform', async (t) => {
@@ -48,7 +49,7 @@ test('Enterprise AI Commerce Platform', async (t) => {
 
     const hits = await search.hybridSearch({ term: 'Kumkumadi', embeddingVector: vector });
     assert.equal(hits.length, 2);
-    assert.ok(hits[0]?.semanticRelevanceScore! > 0.9);
+    assert.ok((hits[0]?.semanticRelevanceScore ?? 0) > 0.9);
   });
 
   await t.test('Generates SEO meta tags and product copy via AI Content Generator', () => {

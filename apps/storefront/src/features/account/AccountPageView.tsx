@@ -5,8 +5,9 @@
 
 'use client';
 
+import { Key, Lock, LogOut,Shield, ShoppingCart, User } from 'lucide-react';
 import React, { useState } from 'react';
-import { User, ShoppingCart, Lock, Key, Shield, LogOut } from 'lucide-react';
+
 import { authService } from '../../lib/commerce-client';
 
 export function AccountPageView() {

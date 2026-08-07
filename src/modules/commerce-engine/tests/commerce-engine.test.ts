@@ -3,22 +3,23 @@
  * @module modules/commerce-engine/tests/commerce-engine.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import test from 'node:test';
+
 import {
+  CartAggregate,
+  CartEngine,
+  CheckoutEngine,
+  InventoryEngine,
+  OrderEngine,
+  PaymentEngine,
   PricingEngine,
   PromotionEngine,
-  InventoryEngine,
-  ShippingEngine,
-  TaxEngine,
-  CartEngine,
-  CartAggregate,
-  PaymentEngine,
-  OrderEngine,
-  CheckoutEngine,
+  RecommendationEngine,
   ReturnEngine,
   SearchEngine,
-  RecommendationEngine,
+  ShippingEngine,
+  TaxEngine,
 } from '../index';
 
 test('Commerce Engine: Pricing & Currency Conversions', async (t) => {

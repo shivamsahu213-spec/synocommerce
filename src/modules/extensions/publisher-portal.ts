@@ -3,8 +3,8 @@
  * @module src/modules/extensions/publisher-portal
  */
 
-import { PublisherAppSubmission } from './types';
 import { PluginSigningEngine } from './plugin-signing';
+import { PublisherAppSubmission } from './types';
 
 export class PublisherPortalProcessor {
   private signingEngine = new PluginSigningEngine();

@@ -3,11 +3,11 @@
  * @module src/modules/analytics
  */
 
-export * from './types';
 export * from './analytics-engine';
-export * from './dashboard-engine';
-export * from './cohort-analysis';
 export * from './attribution-engine';
-export * from './forecast-engine';
+export * from './cohort-analysis';
 export * from './customer360';
+export * from './dashboard-engine';
+export * from './forecast-engine';
 export * from './report-builder';
+export * from './types';

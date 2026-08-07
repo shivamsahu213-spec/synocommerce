@@ -6,7 +6,7 @@
  * @module application/ports/ports.interface
  */
 
-import { AuthorizePaymentInput, CapturePaymentInput, PaymentDTO, ShipmentDTO, CreateShipmentInput, TaxCalculationDTO, CalculateTaxInput } from '../dto';
+import { AuthorizePaymentInput, CalculateTaxInput,CapturePaymentInput, CreateShipmentInput, PaymentDTO, ShipmentDTO, TaxCalculationDTO } from '../dto';
 import { Result } from '../results';
 
 export interface IPaymentPort {

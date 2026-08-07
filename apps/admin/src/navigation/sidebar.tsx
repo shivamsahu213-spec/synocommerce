@@ -5,20 +5,21 @@
 
 'use client';
 
-import React from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import {
-  LayoutDashboard,
-  Package,
-  ShoppingCart,
-  Users,
-  Puzzle,
-  Settings,
   Building2,
   ChevronDown,
+  LayoutDashboard,
+  Package,
+  Puzzle,
+  Settings,
+  ShoppingCart,
   Sparkles,
+  Users,
 } from 'lucide-react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import React from 'react';
+
 import { useAuth } from '../providers/auth-provider';
 
 export function Sidebar() {

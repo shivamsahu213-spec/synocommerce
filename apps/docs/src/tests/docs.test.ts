@@ -3,8 +3,8 @@
  * @module apps/docs/tests/docs.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import test from 'node:test';
 
 test('Production Documentation Website: Structure & Navigation', async (t) => {
   const sidebarLinks = [

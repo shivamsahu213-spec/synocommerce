@@ -7,29 +7,29 @@
  * @module domain/shipping/aggregates
  */
 
-import { AggregateRoot, Address } from '../..';
+import { Address,AggregateRoot } from '../..';
 import { OrderIdentifier } from '../../orders/value-objects';
 import {
   IShipment,
   IShipmentPackage,
   IShippingLabel,
 } from '../contracts';
-import {
-  ShipmentIdentifier,
-  CarrierIdentifier,
-  TrackingEvent,
-  ShippingRate,
-} from '../value-objects';
-import { ShipmentStatus } from '../types';
 import { InvalidShipmentStateError } from '../errors';
 import {
   ShipmentCreatedEvent,
-  ShipmentPackedEvent,
-  ShipmentDispatchedEvent,
   ShipmentDeliveredEvent,
+  ShipmentDispatchedEvent,
+  ShipmentPackedEvent,
   ShipmentReturnedEvent,
   TrackingUpdatedEvent,
 } from '../events';
+import { ShipmentStatus } from '../types';
+import {
+  CarrierIdentifier,
+  ShipmentIdentifier,
+  ShippingRate,
+  TrackingEvent,
+} from '../value-objects';
 
 export class ShipmentAggregate extends AggregateRoot<ShipmentIdentifier> implements IShipment {
   private _status: ShipmentStatus;

@@ -1,14 +1,14 @@
 import { AggregateRoot } from '../..';
-import {
-  CheckoutSessionIdentifier,
-  CheckoutStep,
-  ShippingSelection,
-  BillingSelection,
-  PaymentSelection,
-  CheckoutTaxEstimate,
-} from '../value-objects';
 import { ICheckoutSession } from '../contracts';
 import { CheckoutStatus } from '../types';
+import {
+  BillingSelection,
+  CheckoutSessionIdentifier,
+  CheckoutStep,
+  CheckoutTaxEstimate,
+  PaymentSelection,
+  ShippingSelection,
+} from '../value-objects';
 
 export class CheckoutSessionAggregate extends AggregateRoot<CheckoutSessionIdentifier> implements ICheckoutSession {
   private _step: CheckoutStep;

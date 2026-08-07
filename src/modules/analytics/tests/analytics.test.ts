@@ -3,15 +3,16 @@
  * @module src/modules/analytics/tests/analytics.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import test from 'node:test';
+
 import {
   AnalyticsEngineProcessor,
-  DashboardEngineProcessor,
-  CohortAnalysisEngine,
   AttributionEngineProcessor,
-  ForecastEngineProcessor,
+  CohortAnalysisEngine,
   Customer360EngineProcessor,
+  DashboardEngineProcessor,
+  ForecastEngineProcessor,
   ReportBuilderEngine,
 } from '../index';
 

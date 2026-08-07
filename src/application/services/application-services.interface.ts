@@ -6,34 +6,34 @@
  * @module application/services/application-services.interface
  */
 
-import { Result } from '../results';
 import {
-  CartDTO,
   AddItemToCartInput,
-  RemoveItemFromCartInput,
-  MergeCartInput,
-  CheckoutSessionDTO,
-  StartCheckoutInput,
-  OrderDTO,
-  PlaceOrderInput,
-  PaymentDTO,
+  ApproveRefundInput,
   AuthorizePaymentInput,
+  CalculateTaxInput,
   CapturePaymentInput,
-  ShipmentDTO,
+  CartDTO,
+  CategoryDTO,
+  CheckoutSessionDTO,
   CreateShipmentInput,
   CustomerDTO,
-  ProductDTO,
-  SearchProductsInput,
-  CategoryDTO,
-  ReturnRequestDTO,
-  RequestReturnInput,
-  RefundDTO,
-  ApproveRefundInput,
-  TaxCalculationDTO,
-  CalculateTaxInput,
-  InvoiceDTO,
   GenerateInvoiceInput,
+  InvoiceDTO,
+  MergeCartInput,
+  OrderDTO,
+  PaymentDTO,
+  PlaceOrderInput,
+  ProductDTO,
+  RefundDTO,
+  RemoveItemFromCartInput,
+  RequestReturnInput,
+  ReturnRequestDTO,
+  SearchProductsInput,
+  ShipmentDTO,
+  StartCheckoutInput,
+  TaxCalculationDTO,
 } from '../dto';
+import { Result } from '../results';
 
 export interface ICartApplicationService {
   createCart(currency: string, customerId?: string): Promise<Result<CartDTO>>;

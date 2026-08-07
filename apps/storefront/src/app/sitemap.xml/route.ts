@@ -4,6 +4,7 @@
  */
 
 import { NextResponse } from 'next/server';
+
 import { STOREFRONT_PRODUCTS } from '../../lib/commerce-client';
 
 export async function GET() {

@@ -4,7 +4,7 @@
  */
 
 import { IDeliveryContext } from '../contracts';
-import { PaginationOptions, CursorPaginationOptions, SortOption, FilterOption } from '../types';
+import { CursorPaginationOptions, FilterOption,PaginationOptions, SortOption } from '../types';
 
 export interface ApiRequestWrapper<TBody = unknown> {
   readonly body: TBody;

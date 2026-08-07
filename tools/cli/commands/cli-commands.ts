@@ -3,8 +3,8 @@
  * @module tools/cli/commands/cli-commands
  */
 
-import { CodeGeneratorEngine, GeneratorType } from '../generators/generator-engine';
 import { DoctorEngine } from '../doctor/doctor';
+import { CodeGeneratorEngine, GeneratorType } from '../generators/generator-engine';
 import { PackagerEngine } from '../packaging/packager';
 
 export class SynoCliHandler {

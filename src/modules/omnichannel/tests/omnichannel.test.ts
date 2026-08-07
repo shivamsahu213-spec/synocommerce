@@ -3,12 +3,13 @@
  * @module modules/omnichannel/tests/omnichannel.test
  */
 
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import test from 'node:test';
+
 import {
+  OmnichannelFulfillmentEngine,
   PosRegisterEngine,
   StoreInventorySyncEngine,
-  OmnichannelFulfillmentEngine,
   UnifiedLoyaltyEngine,
 } from '../index';
 

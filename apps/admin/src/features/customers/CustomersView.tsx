@@ -5,10 +5,11 @@
 
 'use client';
 
+import { Calendar,Mail, ShoppingCart, Users } from 'lucide-react';
 import React, { useState } from 'react';
-import { Users, Mail, ShoppingCart, Calendar } from 'lucide-react';
-import { DataTable, ColumnDef } from '../../components/shared/data-table';
-import { INITIAL_CUSTOMERS, CustomerItem } from '../../lib/data-store';
+
+import { ColumnDef,DataTable } from '../../components/shared/data-table';
+import { CustomerItem,INITIAL_CUSTOMERS } from '../../lib/data-store';
 import { formatCurrency } from '../../lib/utils';
 
 export function CustomersView() {

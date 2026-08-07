@@ -1,4 +1,4 @@
-import { Identifier, Money, Currency, Percentage, DateRange } from '../..';
+import { Currency, DateRange,Identifier, Money, Percentage } from '../..';
 import { PriceRuleType, TaxCalculationStrategy } from '../types';
 
 export interface IBasePrice {

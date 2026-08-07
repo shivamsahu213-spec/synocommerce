@@ -3,7 +3,7 @@
  * @module modules/cms/cms-engine
  */
 
-import { CmsPageDocument, CmsBlockInstance } from './types';
+import { CmsBlockInstance,CmsPageDocument } from './types';
 
 export class CmsDocumentEngine {
   private readonly _pages = new Map<string, CmsPageDocument>();

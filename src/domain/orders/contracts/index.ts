@@ -1,6 +1,6 @@
-import { SKU, Money, Currency } from '../..';
-import { OrderIdentifier, OrderNumber, OrderTotals, OrderPayment, OrderShipment, OrderInvoice } from '../value-objects';
-import { OrderStatus, OrderPaymentStatus, OrderFulfillmentStatus } from '../types';
+import { Currency,Money, SKU } from '../..';
+import { OrderFulfillmentStatus,OrderPaymentStatus, OrderStatus } from '../types';
+import { OrderIdentifier, OrderInvoice,OrderNumber, OrderPayment, OrderShipment, OrderTotals } from '../value-objects';
 
 export interface IOrderItem {
   readonly itemId: string;

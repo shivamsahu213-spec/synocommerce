@@ -1,5 +1,5 @@
-import { LengthUnit } from '../types';
 import { InvalidValueObjectError } from '../errors';
+import { LengthUnit } from '../types';
 
 /**
  * 3D Physical Dimension Value Object.

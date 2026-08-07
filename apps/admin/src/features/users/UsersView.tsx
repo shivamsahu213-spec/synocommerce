@@ -5,8 +5,8 @@
 
 'use client';
 
+import { CheckCircle,Key, Lock, Shield, UserCheck } from 'lucide-react';
 import React, { useState } from 'react';
-import { Shield, UserCheck, Key, Lock, CheckCircle } from 'lucide-react';
 
 interface UserRecord {
   id: string;

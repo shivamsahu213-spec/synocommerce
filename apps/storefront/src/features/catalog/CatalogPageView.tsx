@@ -5,12 +5,13 @@
 
 'use client';
 
-import React, { useState } from 'react';
+import { Filter, Heart, ShoppingBag, SlidersHorizontal } from 'lucide-react';
 import Link from 'next/link';
-import { ShoppingBag, Heart, Filter, SlidersHorizontal } from 'lucide-react';
+import React, { useState } from 'react';
+
 import { STOREFRONT_PRODUCTS } from '../../lib/commerce-client';
-import { useStorefront } from '../../providers/storefront-provider';
 import { formatCurrency } from '../../lib/utils';
+import { useStorefront } from '../../providers/storefront-provider';
 
 export function CatalogPageView() {
   const { addToCart, toggleWishlist, wishlist, currency } = useStorefront();

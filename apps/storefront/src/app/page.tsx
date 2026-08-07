@@ -1,15 +1,15 @@
-import React from 'react';
-import Link from 'next/link';
 import {
-  KALYAN_STORE_CONFIG,
-  KALYAN_BRAND_CONFIG,
-  KALYAN_PRODUCTS,
-  KALYAN_HOMEPAGE_CMS,
-  KALYAN_SEO_CONFIG,
   AyurvedicProduct,
+  KALYAN_BRAND_CONFIG,
+  KALYAN_HOMEPAGE_CMS,
+  KALYAN_PRODUCTS,
+  KALYAN_SEO_CONFIG,
+  KALYAN_STORE_CONFIG,
   ValueProp,
 } from '@kalyan-ayurvedic';
-import { ShoppingBag, Star, ShieldCheck, Leaf, Award, Heart, CheckCircle2, ArrowRight } from 'lucide-react';
+import { ArrowRight,Award, CheckCircle2, Heart, Leaf, ShieldCheck, ShoppingBag, Star } from 'lucide-react';
+import Link from 'next/link';
+import React from 'react';
 
 export const metadata = {
   title: KALYAN_SEO_CONFIG.defaultTitle,

@@ -3,8 +3,8 @@
  * @module modules/integration-hub
  */
 
-export * from './types';
-export * from './sync-engine';
-export * from './erp-connector';
 export * from './crm-connector';
+export * from './erp-connector';
 export * from './marketplace-logistics';
+export * from './sync-engine';
+export * from './types';

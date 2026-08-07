@@ -6,8 +6,8 @@
 
 import { IBaseRepository } from '../..';
 import { OrderIdentifier } from '../../orders/value-objects';
-import { InvoiceIdentifier, InvoiceNumber } from '../value-objects';
 import { InvoiceAggregate } from '../aggregates';
+import { InvoiceIdentifier, InvoiceNumber } from '../value-objects';
 
 export interface IInvoiceRepository
   extends IBaseRepository<InvoiceAggregate, InvoiceIdentifier>
