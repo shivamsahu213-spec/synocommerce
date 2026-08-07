@@ -15,11 +15,14 @@ export class AuthController {
   constructor(private service: AuthService = authService) {}
 
   private extractRequestMeta(req: Request) {
-    return {
-      ipAddress: (req.headers['x-forwarded-for'] as string) || req.ip || req.socket.remoteAddress,
-      userAgent: req.headers['user-agent'],
-      tenantId: (req.headers['x-tenant-id'] as string) || (req.body?.tenantId as string),
-    };
+    const meta: { ipAddress?: string; userAgent?: string; tenantId?: string } = {};
+    const ip = (req.headers['x-forwarded-for'] as string) || req.ip || req.socket.remoteAddress;
+    const ua = req.headers['user-agent'];
+    const tenantId = (req.headers['x-tenant-id'] as string) || (req.body?.tenantId as string);
+    if (ip) meta.ipAddress = ip;
+    if (ua) meta.userAgent = ua;
+    if (tenantId) meta.tenantId = tenantId;
+    return meta;
   }
 
   register = async (req: Request, res: Response, next: NextFunction): Promise<void> => {

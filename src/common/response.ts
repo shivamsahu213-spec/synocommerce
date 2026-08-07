@@ -10,7 +10,7 @@ export interface ApiResponse<T = unknown> {
     message: string;
     details?: unknown;
   };
-  meta?: Record<string, unknown>;
+  meta?: any;
 }
 
 /**

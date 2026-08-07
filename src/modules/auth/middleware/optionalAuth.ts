@@ -24,8 +24,8 @@ export async function optionalAuth(req: AuthenticatedRequest, res: Response, nex
         if (store) {
           store.userId = user.id;
           store.tenantId = user.tenantId || '';
-          store.roles = payload.roleIds;
-          store.permissions = payload.permissions;
+          store.roles = payload.roleIds || payload.roles || [];
+          store.permissions = payload.permissions || [];
         }
       }
     }

@@ -37,7 +37,7 @@ export abstract class BaseRepository<T> implements IRepository<T> {
     }
   }
 
-  async findFirst(where = {}, includeDeleted = false): Promise<T | null> {
+  async findFirst(where: any = {}, includeDeleted = false): Promise<T | null> {
     try {
       const finalWhere = { ...where, ...(includeDeleted ? {} : { deletedAt: null }) };
       return (await (this.client[this.model] as any).findFirst({ where: finalWhere })) as T | null;
@@ -47,7 +47,7 @@ export abstract class BaseRepository<T> implements IRepository<T> {
     }
   }
 
-  async findMany(params = {}): Promise<T[]> {
+  async findMany(params: any = {}): Promise<T[]> {
     try {
       const { where = {}, orderBy, skip, take, includeDeleted = false } = params;
       const finalWhere = { ...where, ...(includeDeleted ? {} : { deletedAt: null }) };
@@ -128,17 +128,17 @@ export abstract class BaseRepository<T> implements IRepository<T> {
     await hardDelete(this.model, { id });
   }
 
-  async count(where = {}, includeDeleted = false): Promise<number> {
+  async count(where: any = {}, includeDeleted = false): Promise<number> {
     const finalWhere = { ...where, ...(includeDeleted ? {} : { deletedAt: null }) };
     return (await (this.client[this.model] as any).count({ where: finalWhere })) as number;
   }
 
-  async exists(where = {}, includeDeleted = false): Promise<boolean> {
+  async exists(where: any = {}, includeDeleted = false): Promise<boolean> {
     const cnt = await this.count(where, includeDeleted);
     return cnt > 0;
   }
 
-  async paginate(params): Promise<{ items: T[]; meta: PaginationMeta }> {
+  async paginate(params: any): Promise<{ items: T[]; meta: PaginationMeta }> {
     const { page = 1, pageSize = 20, where = {}, orderBy, includeDeleted = false } = params;
     const { items, meta } = await import('../pagination').then((m) =>
       m.paginate<T>(this.model, { where, orderBy }, page, pageSize),
@@ -146,19 +146,18 @@ export abstract class BaseRepository<T> implements IRepository<T> {
     return { items, meta };
   }
 
-  async paginateCursor(params): Promise<{ items: T[]; meta: CursorMeta }> {
-    const { cursor, take, where = {}, orderBy, includeDeleted = false } = params;
+  async paginateCursor(params: any): Promise<{ items: T[]; meta: CursorMeta }> {
+    const { cursor, take, where = {}, orderBy } = params;
     const result = await import('../pagination').then((m) =>
       m.paginateCursor<T>(this.model, { where, orderBy }, { cursor, take }),
     );
-    const meta: CursorMeta = {
-      nextCursor: result.nextCursor,
-      previousCursor: result.previousCursor,
-    };
+    const meta: CursorMeta = {};
+    if (result.nextCursor) meta.nextCursor = result.nextCursor;
+    if (result.previousCursor) meta.previousCursor = result.previousCursor;
     return { items: result.items, meta };
   }
 
-  async filter(filter: FilterGroup, options = {}): Promise<T[]> {
+  async filter(filter: FilterGroup, options: any = {}): Promise<T[]> {
     const where = buildWhere(filter);
     const { orderBy, includeDeleted = false } = options;
     return this.findMany({ where, orderBy, includeDeleted });

@@ -46,7 +46,7 @@ function mapPrismaError(error: any): Error {
   return error;
 }
 
-export const prismaMiddleware: Prisma.Middleware = async (params, next) => {
+export const prismaMiddleware = async (params: any, next: (params: any) => Promise<any>): Promise<any> => {
   const start = Date.now();
   const ctx = (() => {
     try {

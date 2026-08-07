@@ -17,7 +17,9 @@ export function parseSort(input: string): OrderBy[] {
     .map((part) => part.trim())
     .filter(Boolean)
     .map((segment) => {
-      const [field, dir] = segment.split(/\s+/);
+      const parts = segment.split(/\s+/);
+      const field = parts[0] as string;
+      const dir = parts[1];
       const direction = (dir ?? 'asc').toLowerCase() as SortDirection;
       return { [field]: direction };
     });

@@ -52,8 +52,8 @@ export class AuthRepository {
     });
   }
 
-  async createUser(data: Prisma.UserCreateInput): Promise<User> {
-    return this.db.user.create({ data });
+  async createUser(data: Prisma.UserUncheckedCreateInput | Prisma.UserCreateInput): Promise<User> {
+    return this.db.user.create({ data: data as any });
   }
 
   async updateUser(id: string, data: Prisma.UserUpdateInput): Promise<User> {
@@ -205,9 +205,18 @@ export class AuthRepository {
   }
 
   // Audit Logs
-  async createAuditLog(data: Prisma.AuditLogCreateInput): Promise<AuditLog | null> {
+  async createAuditLog(data: { tenantId?: string | null; actorId?: string | null; action: string; targetId?: string | null; metadata?: any }): Promise<AuditLog | null> {
     try {
-      return await this.db.auditLog.create({ data });
+      const tenantId = data.tenantId || 'default-store';
+      return await this.db.auditLog.create({
+        data: {
+          tenantId,
+          actorId: data.actorId ?? null,
+          action: data.action,
+          targetId: data.targetId ?? null,
+          metadata: data.metadata ?? null,
+        },
+      });
     } catch {
       return null;
     }

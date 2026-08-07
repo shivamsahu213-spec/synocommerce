@@ -55,5 +55,9 @@ export async function paginateCursor<T>(
   const nextCursor = items.length === Math.abs(take) ? Buffer.from(JSON.stringify({ id: (items[items.length - 1] as any).id })).toString('base64') : undefined;
   const previousCursor = decodedCursor ? Buffer.from(JSON.stringify({ id: (items[0] as any).id })).toString('base64') : undefined;
 
-  return { items, nextCursor, previousCursor };
+  const result: { items: T[]; nextCursor?: string; previousCursor?: string } = { items };
+  if (nextCursor) result.nextCursor = nextCursor;
+  if (previousCursor) result.previousCursor = previousCursor;
+
+  return result;
 }

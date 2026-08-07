@@ -125,6 +125,8 @@ model Store {
   locations    Location[]
   marketplace  MarketplaceStore[]
   roles        Role[]
+  brands       Brand[]
+  collections  Collection[]
 }
 
 model User {
@@ -206,6 +208,18 @@ model UserRole {
   @@id([userId, roleId])
 }
 
+enum ProductStatus {
+  DRAFT
+  ACTIVE
+  ARCHIVED
+  SCHEDULED
+}
+
+enum CollectionType {
+  MANUAL
+  SMART
+}
+
 model Category {
   id          String   @id @default(cuid())
   storeId     String
@@ -213,6 +227,9 @@ model Category {
   name        String
   slug        String   @unique
   description String?
+  isFeatured  Boolean  @default(false)
+  sortOrder   Int      @default(0)
+  deletedAt   DateTime?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
@@ -222,23 +239,106 @@ model Category {
   products    ProductCategory[]
 }
 
-model Product {
+model Brand {
   id          String   @id @default(cuid())
-  storeId     String
-  sku         String   @unique
+  storeId     String?
   name        String
+  slug        String   @unique
+  logoUrl     String?
   description String?
-  price       Decimal  @db.Decimal(12,2)
-  currency    Currency
-  isActive    Boolean @default(true)
+  seoTitle    String?
+  seoDescription String?
+  isActive    Boolean  @default(true)
+  deletedAt   DateTime?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
-  store       Store @relation(fields: [storeId], references: [id])
+  store       Store?   @relation(fields: [storeId], references: [id])
+  products    Product[]
+}
+
+model Collection {
+  id          String   @id @default(cuid())
+  storeId     String?
+  name        String
+  slug        String   @unique
+  description String?
+  type        CollectionType @default(MANUAL)
+  rules       Json?
+  isActive    Boolean  @default(true)
+  deletedAt   DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  store       Store?   @relation(fields: [storeId], references: [id])
+  products    ProductCollection[]
+}
+
+model ProductCollection {
+  productId    String
+  collectionId String
+  createdAt    DateTime @default(now())
+
+  product    Product    @relation(fields: [productId], references: [id])
+  collection Collection @relation(fields: [collectionId], references: [id])
+
+  @@id([productId, collectionId])
+}
+
+model Product {
+  id             String        @id @default(cuid())
+  storeId        String
+  sku            String        @unique
+  name           String
+  description    String?
+  price          Decimal       @db.Decimal(12,2)
+  currency       Currency
+  status         ProductStatus @default(DRAFT)
+  barcode        String?
+  weight         Float?
+  dimensions     Json?
+  brandId        String?
+  seoTitle       String?
+  seoDescription String?
+  seoKeywords    String[]      @default([])
+  canonicalUrl   String?
+  ogImage        String?
+  tags           String[]      @default([])
+  isActive       Boolean       @default(true)
+  deletedAt      DateTime?
+  deletedBy      String?
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+
+  store       Store               @relation(fields: [storeId], references: [id])
+  brand       Brand?              @relation(fields: [brandId], references: [id])
   categories  ProductCategory[]
+  collections ProductCollection[]
+  variants    ProductVariant[]
   mediaLinks  ProductMedia[]
   inventory   Inventory?
   orderItems  OrderItem[]
+}
+
+model ProductVariant {
+  id          String    @id @default(cuid())
+  productId   String
+  sku         String    @unique
+  barcode     String?
+  price       Decimal?  @db.Decimal(12,2)
+  size        String?
+  color       String?
+  material    String?
+  storage     String?
+  packSize    String?
+  weight      Float?
+  dimensions  Json?
+  isActive    Boolean   @default(true)
+  deletedAt   DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  product     Product   @relation(fields: [productId], references: [id])
 }
 
 model ProductCategory {

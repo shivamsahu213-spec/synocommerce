@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["dom", "dom.iterable", "es2022"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2022"
+    ],
     "allowJs": false,
     "skipLibCheck": true,
     "strict": true,
@@ -18,50 +22,140 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [{ "name": "next" }],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@config/*": ["src/config/*"],
-      "@domain/*": ["src/domain/*"],
-      "@app/*": ["src/app/*"],
-      "@features/*": ["src/features/*"],
-      "@platform/*": ["src/platform/*"],
-      "@shared/*": ["src/shared/*"],
-      "@theme/*": ["src/theme/*"],
-      "@store/*": ["src/store/*"],
-      "@types/*": ["src/types/*"],
-      "@admin/*": ["apps/admin/src/*"],
-      "@storefront/*": ["apps/storefront/src/*"],
-      "@tools/*": ["tools/*"],
-      "@operations/*": ["platform/operations/*"],
-      "@integrations/*": ["src/integrations/*"],
-      "@cms/*": ["src/modules/cms/*"],
-      "@installer/*": ["tools/installer/*"],
-      "@marketplace/*": ["tools/marketplace/*"],
-      "@saas/*": ["platform/saas/*"],
-      "@ai/*": ["src/modules/ai/*"],
-      "@integration-hub/*": ["src/modules/integration-hub/*"],
-      "@workflows/*": ["src/modules/workflows/*"],
-      "@b2b/*": ["src/modules/b2b/*"],
-      "@omnichannel/*": ["src/modules/omnichannel/*"],
-      "@api-platform/*": ["src/modules/api-platform/*"],
-      "@observability/*": ["src/modules/observability/*"],
-      "@security/*": ["src/modules/security/*"],
-      "@devops/*": ["platform/devops/*"],
-      "@analytics/*": ["src/modules/analytics/*"],
-      "@extensions/*": ["src/modules/extensions/*"],
-      "@data-platform/*": ["src/modules/data-platform/*"],
-      "@docs/*": ["apps/docs/src/*"],
-      "@website/*": ["apps/website/src/*"],
-      "@cloud/*": ["apps/cloud/src/*"],
-      "@portal/*": ["apps/portal/src/*"],
-      "@starter-fashion/*": ["stores/starter-fashion/*"],
-      "@starter-electronics/*": ["stores/starter-electronics/*"],
-      "@kalyan-ayurvedic": ["stores/kalyan-ayurvedic/index.ts"],
-      "@kalyan-ayurvedic/*": ["stores/kalyan-ayurvedic/*"]
+      "@/*": [
+        "src/*"
+      ],
+      "@config/*": [
+        "src/config/*"
+      ],
+      "@domain/*": [
+        "src/domain/*"
+      ],
+      "@app/*": [
+        "src/app/*"
+      ],
+      "@features/*": [
+        "src/features/*"
+      ],
+      "@platform/*": [
+        "src/platform/*"
+      ],
+      "@shared/*": [
+        "src/shared/*"
+      ],
+      "@theme/*": [
+        "src/theme/*"
+      ],
+      "@store/*": [
+        "src/store/*"
+      ],
+      "@types/*": [
+        "src/types/*"
+      ],
+      "@admin/*": [
+        "apps/admin/src/*"
+      ],
+      "@storefront/*": [
+        "apps/storefront/src/*"
+      ],
+      "@tools/*": [
+        "tools/*"
+      ],
+      "@operations/*": [
+        "platform/operations/*"
+      ],
+      "@integrations/*": [
+        "src/integrations/*"
+      ],
+      "@cms/*": [
+        "src/modules/cms/*"
+      ],
+      "@installer/*": [
+        "tools/installer/*"
+      ],
+      "@marketplace/*": [
+        "tools/marketplace/*"
+      ],
+      "@saas/*": [
+        "platform/saas/*"
+      ],
+      "@ai/*": [
+        "src/modules/ai/*"
+      ],
+      "@integration-hub/*": [
+        "src/modules/integration-hub/*"
+      ],
+      "@workflows/*": [
+        "src/modules/workflows/*"
+      ],
+      "@b2b/*": [
+        "src/modules/b2b/*"
+      ],
+      "@omnichannel/*": [
+        "src/modules/omnichannel/*"
+      ],
+      "@api-platform/*": [
+        "src/modules/api-platform/*"
+      ],
+      "@observability/*": [
+        "src/modules/observability/*"
+      ],
+      "@security/*": [
+        "src/modules/security/*"
+      ],
+      "@devops/*": [
+        "platform/devops/*"
+      ],
+      "@analytics/*": [
+        "src/modules/analytics/*"
+      ],
+      "@extensions/*": [
+        "src/modules/extensions/*"
+      ],
+      "@data-platform/*": [
+        "src/modules/data-platform/*"
+      ],
+      "@docs/*": [
+        "apps/docs/src/*"
+      ],
+      "@website/*": [
+        "apps/website/src/*"
+      ],
+      "@cloud/*": [
+        "apps/cloud/src/*"
+      ],
+      "@portal/*": [
+        "apps/portal/src/*"
+      ],
+      "@starter-fashion/*": [
+        "stores/starter-fashion/*"
+      ],
+      "@starter-electronics/*": [
+        "stores/starter-electronics/*"
+      ],
+      "@kalyan-ayurvedic": [
+        "stores/kalyan-ayurvedic/index.ts"
+      ],
+      "@kalyan-ayurvedic/*": [
+        "stores/kalyan-ayurvedic/*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", ".next"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next"
+  ]
 }

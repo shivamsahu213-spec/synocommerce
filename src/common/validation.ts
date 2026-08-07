@@ -47,7 +47,7 @@ export const sortSchema = z
   .optional();
 
 // Generic filter payload – loosely typed; each key maps to a value or condition object.
-export const filterSchema = z.record(z.any()).optional();
+export const filterSchema = z.record(z.string(), z.any()).optional();
 
 // Example: payload for creating a resource – extend per model as needed.
 // export const createUserSchema = z.object({

@@ -3,17 +3,18 @@ import jwt, { Secret, SignOptions } from 'jsonwebtoken';
 export interface JwtPayload {
   userId: string;
   tenantId?: string | null;
-  roleIds: string[];
-  permissions: string[];
-  tokenVersion: number;
-  sessionId: string;
+  roleIds?: string[];
+  roles?: string[];
+  permissions?: string[];
+  tokenVersion?: number;
+  sessionId?: string;
 }
 
 const ACCESS_TOKEN_SECRET: Secret = process.env.JWT_ACCESS_SECRET || 'default_jwt_access_secret_synocommerce_enterprise_2026';
 const REFRESH_TOKEN_SECRET: Secret = process.env.JWT_REFRESH_SECRET || 'default_jwt_refresh_secret_synocommerce_enterprise_2026';
 
-const ACCESS_TOKEN_EXPIRES_IN = (process.env.JWT_ACCESS_EXPIRES || '15m') as jwt.SignOptions['expiresIn'];
-const REFRESH_TOKEN_EXPIRES_IN = (process.env.JWT_REFRESH_EXPIRES || '30d') as jwt.SignOptions['expiresIn'];
+const ACCESS_TOKEN_EXPIRES_IN = (process.env.JWT_ACCESS_EXPIRES || '15m') as any;
+const REFRESH_TOKEN_EXPIRES_IN = (process.env.JWT_REFRESH_EXPIRES || '30d') as any;
 
 export function generateAccessToken(payload: JwtPayload): string {
   const options: SignOptions = {

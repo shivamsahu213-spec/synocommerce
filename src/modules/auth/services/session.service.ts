@@ -4,11 +4,11 @@ import { Session, RefreshToken } from '@prisma/client';
 
 export interface CreateSessionParams {
   userId: string;
-  tenantId?: string | null;
-  ipAddress?: string;
-  userAgent?: string;
-  deviceInfo?: Record<string, any>;
-  expiresInDays?: number;
+  tenantId?: string | null | undefined;
+  ipAddress?: string | null | undefined;
+  userAgent?: string | null | undefined;
+  deviceInfo?: Record<string, any> | null | undefined;
+  expiresInDays?: number | undefined;
 }
 
 export class SessionService {
@@ -27,7 +27,7 @@ export class SessionService {
       tenantId: params.tenantId || null,
       ipAddress: params.ipAddress || null,
       userAgent: params.userAgent || null,
-      deviceInfo: params.deviceInfo || undefined,
+      deviceInfo: (params.deviceInfo as any) ?? null,
       expiresAt,
       refreshTokenHash,
     });

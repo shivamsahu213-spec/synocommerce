@@ -17,7 +17,7 @@ export async function checkPostgres() {
 }
 
 // Redis client placeholder – user can replace with actual ioredis or redis client.
-let redisClient: any = null;
+const redisClient = (globalThis as any).redisClient || null;
 export async function checkRedis() {
   if (!redisClient) {
     logger.warn({ }, 'Redis client not configured – skipping health check');
