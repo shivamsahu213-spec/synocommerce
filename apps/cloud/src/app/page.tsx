@@ -4,6 +4,7 @@
  */
 
 import React from 'react';
+import Link from 'next/link';
 
 export default function CloudMerchantPortal() {
   return (
@@ -14,12 +15,12 @@ export default function CloudMerchantPortal() {
           Syno Cloud Control
         </div>
         <nav style={{ display: 'flex', flexDirection: 'column', gap: '1rem', fontSize: '0.95rem' }}>
-          <a href="#" style={{ color: '#38BDF8', fontWeight: 'bold', textDecoration: 'none' }}>📊 Dashboard</a>
-          <a href="#" style={{ color: '#94A3B8', textDecoration: 'none' }}>🏪 Stores (2 Active)</a>
-          <a href="#" style={{ color: '#94A3B8', textDecoration: 'none' }}>💳 Billing & Invoices</a>
-          <a href="#" style={{ color: '#94A3B8', textDecoration: 'none' }}>🌐 Custom Domains</a>
-          <a href="#" style={{ color: '#94A3B8', textDecoration: 'none' }}>🤖 AI & API Usage</a>
-          <a href="#" style={{ color: '#94A3B8', textDecoration: 'none' }}>👥 Team & Security</a>
+          <Link href="/cloud/dashboard" className="text-[#38BDF8] font-bold no-underline">📊 Dashboard</Link>
+          <Link href="/cloud/stores" className="text-[#94A3B8] no-underline">🏪 Stores (2 Active)</Link>
+          <Link href="/cloud/billing" className="text-[#94A3B8] no-underline">💳 Billing &amp; Invoices</Link>
+          <Link href="/cloud/custom-domains" className="text-[#94A3B8] no-underline">🌐 Custom Domains</Link>
+          <Link href="/cloud/ai-usage" className="text-[#94A3B8] no-underline">🤖 AI &amp; API Usage</Link>
+          <Link href="/cloud/team-security" className="text-[#94A3B8] no-underline">👥 Team &amp; Security</Link>
         </nav>
       </aside>
 
